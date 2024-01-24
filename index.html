@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta
+        charset="utf-8">
+        <!-- <base href="/"> -->
+        <title>Simple Starter 3.0</title>
+        <meta name="description" content="Simple Starter 2.0 Description ">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta property="og:image" content="images/preview.jpg">
+        <link rel="icon" href="images/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            rel="preload stylesheet"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+        <link rel="preload stylesheet" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link
+            rel="preload stylesheet"
+            as="style"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body class="preload">
+        <div class="wrapper">
+            <header class="page-header">
+                <div class="page-header__site-container">
+                    <a href="/" class="logo">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <button data-path="modal" class="button">
+                        show modal
+                    </button>
+                </div>
+            </header>
+            <main class="page-main">
+                <section class="section">
+                    <div class="section__site-container _intro-padding-top">
+                        <h1 class="visually-hidden">
+                            Section title
+                        </h1>
+                        <h2 class="h1">
+                            HTML/CSS template for VS-code
+                        </h2>
+                        <div class="section__body grid-row">
+                            <div class="grid-col-6 grid-col-md-8">
+                                <picture>
+                                    <source media="(max-width: 992px)" type="image/webp" srcset="./images/hero-back-m.webp" alt="hero image"/>
+                                    <source media="(min-width: 992px)" type="image/webp" srcset="./images/hero-back.webp" alt="hero image"/>
+                                    <img class="lazy" src="./images/hero-back.jpg" alt="hero image">
+                                </picture>
+                            </div>
+                            <div class="grid-col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="section__site-container">
+                        <h2 class="h2">
+                            Form with masks and validation for VS-code
+                        </h2>
+                        <form action="" class="form" data-need-validation>
+                            <input
+                                type="text"
+                                name="phone"
+                                id=""
+                                class="input js-phone-input"
+                                placeholder="Введите номер телефона"
+                                required
+                                data-parsley-phone>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer class="page-footer _bg-text _color-white">
+                <div class="footer__site-container">
+                    footer
+                </div>
+            </footer>
+        </div>
+        <div class="modal">
+            <div class="modal__container" data-target="modal">
+                <div class="modal__content">
+                    <button type="button" class="modal__close-btn modal-close">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script
+            async
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+            crossorigin="anonymous"
+            defer></script>
+        <script
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/inputmask.min.js"
+            integrity="sha512-7MSrprC5qi3xYbOIZqbB59XEYQMILpy0tQhiHDOjX8v0+7zUJ54o5Xw2UB0GXvim3LKMPbHld9BPzV9euBjfug=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+            defer></script>
+        <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+        <script async src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
+        <script src="./js/main.js" type="module" defer></script>
+    </body>
+</html>

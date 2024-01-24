@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  padding: 2rem 4rem;
+
+  color: var(--white);
+  background-color: var(--accent);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0.4rem;
+
+  transition: var(--transition);
+
+  &__text {
+    display: inline-block;
+  }
+
+  @include breakpointMF(tablet) {
+    display: block;
+  }
+
+  @include hover {
+    color: var(--title);
+    background-color: var(--white);
+    border-color: var(--title);
+  }
+}

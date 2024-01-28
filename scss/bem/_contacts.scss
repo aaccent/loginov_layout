@@ -1,0 +1,34 @@
+.contacts {
+    &__row {
+        display: flex;
+        align-items: center;
+        column-gap: 2.6rem;
+    }
+    
+    &__item {
+        padding-right: 2.6rem;
+        padding-left: 0.4rem;
+
+        &:not(:last-child) {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 1;
+
+                height: 80%;
+                width: 1px;
+                transform: translateY(-50%);
+
+                background-color: #DFE0E4;
+                content: "";
+            }
+        }
+
+        @include breakpoint(large-desktop) {
+            padding-right: 1.5rem;
+        }
+    }
+}

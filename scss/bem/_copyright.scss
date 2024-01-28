@@ -1,0 +1,12 @@
+.copyright {
+    opacity: 0.55;
+
+    &--link {
+        text-decoration: underline;
+        transition: var(--transition);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

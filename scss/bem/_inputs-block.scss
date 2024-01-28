@@ -1,0 +1,67 @@
+.inputs-block {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+
+    &__row {
+        position: relative;
+        min-width: 31rem;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            min-width: unset;
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
+.agreement {
+    display: inline-block;
+    max-width: 40rem;
+
+    a,
+    span {
+        display: inline;
+        color: var(--grey-2, #a4a8b8);
+        @include font(1.4rem, 1.428, 500);
+        
+        @include breakpoint(small-tablet) {
+            @include font(1.2rem, 1.666, 500);
+            letter-spacing: -0.12px;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        transition: color var(--transition);
+
+        &:hover {
+            color: var(--black, #231f20);
+        }
+    }
+}
+
+.parsley-errors-list {
+    position: absolute;
+    top: calc(100%);
+    left: 2rem;
+
+    li {
+        @include font(1.2rem, 1.25, 500);
+        color: orangered;
+    }
+}

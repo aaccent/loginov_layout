@@ -1,3 +1,5 @@
+import '../libs/inputmask.js';
+
 export default () => {
   const nameInputs = Array.from(document.querySelectorAll('.js-text-input'));
 

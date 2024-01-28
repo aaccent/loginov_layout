@@ -1,4 +1,428 @@
 .page-footer {
+    overflow: hidden;
     flex: 0 0 auto;
-    padding: 2rem 0;
+    
+    &__main {
+        position: relative;
+        padding: 8rem 0;
+    
+        @include breakpoint(desktop) {
+            padding: 6rem 0;
+        }    
+    
+        @include breakpoint(tablet) {
+            padding: 5rem 0;
+        }
+    
+        @include breakpoint(portrait-tablet) {
+            padding: 4rem 0 1.5rem;
+        }
+        
+        &::before {
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            z-index: 1;
+    
+            display: none;
+            width: 39.2rem;
+            height: 39.2rem;
+    
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22391%22%20height%3D%22386%22%20viewBox%3D%220%200%20391%20386%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M242.109%20521H163.967L2%20223.556H119.924L205.169%20404.976L402.656%201H522C429.65%20173.982%20338.721%20346.963%20246.371%20521H242.109ZM362.874%20433.454V516.781H475.115V433.454H362.874Z%22%20stroke%3D%22%23FFFF20%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            content: "";
+    
+            @include breakpoint(portrait-tablet) {
+                bottom: unset;
+                top: 25%;
+                display: block;
+                width: 12.8rem;
+                height: 19.1rem;
+                background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%22193%22%20viewBox%3D%220%200%20130%20193%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M90.194%20192H61.4918L2%2082.7465H45.3142L76.6257%20149.383L149.164%201H193C159.079%2064.5375%20125.68%20128.075%2091.7595%20192H90.194ZM134.552%20159.844V190.45H175.779V159.844H134.552Z%22%20stroke%3D%22%23FFFF20%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+        }
+
+    }
+
+    &__grid {
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-areas: 
+            "logo menu contacts"
+            "basement menu contacts";
+        grid-template-columns: 50% 1fr 1fr;
+        grid-template-rows: repeat(auto-fill, 14rem);
+
+        @include breakpoint(desktop) {
+            grid-template-columns: 40% 1fr 1fr;
+        }
+
+        @include breakpoint(tablet) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "logo logo"
+                "menu contacts"
+                "menu contacts"
+                "basement basement";
+            row-gap: 4rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "logo"
+                "menu"
+                "contacts"
+                "basement";
+            row-gap: 2.5rem;
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        justify-self: flex-start;
+        align-self: flex-start;
+
+        @include breakpoint(tablet) {
+            justify-self: stretch;
+            padding-bottom: 2.5rem;
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.15);
+        }   
+    }
+
+    &__menu {
+        grid-area: menu;
+        padding-left: 1rem;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+
+        @include breakpoint(portrait-tablet) {
+            padding: 1.5rem 0;
+        }
+    }
+
+    &__basement {
+        grid-area: basement;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__developer {
+        margin-top: auto;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        &--mobile {
+            display: none;
+
+            @include breakpoint(tablet) {
+                display: flex;
+            }
+        }
+
+        &--desktop {
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+
+        @include breakpoint(laptop) {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__copyright {
+        margin-bottom: 2rem; 
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__policy {
+        margin-bottom: 4rem;
+
+        @include breakpoint(laptop) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__feedback {
+        padding: 16rem 0;
+
+        @include breakpoint(laptop) {
+            padding: 10rem 0;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            padding: 8rem 0;
+        }
+    }
+
+    &__decore {
+        position: absolute;
+        right: -7%;
+        bottom: -22%;    
+        z-index: 1;
+
+        width: 52rem;
+        height: 52rem;
+
+        @include breakpoint(portrait-tablet) {
+            display: none;
+        }
+    }
+}
+
+.footer-contacts { 
+    padding: 3.5rem 4rem;
+    border-radius: 1.5rem;
+    background: rgba(3, 58, 67, 0.50);
+    backdrop-filter: blur(4.5px);
+
+    @include breakpoint(portrait-tablet) {
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    &__phones {
+        margin-bottom: 3.5rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 2.5rem;
+        }
+    }
+     
+    &__phone {
+        margin-bottom: 3.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 2.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__list {
+        li {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__span {
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 4rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-top: 2.5rem;
+        }
+    }
+
+    &--smaller {
+        padding: 0;
+        border-radius: unset;
+        background: unset;
+        backdrop-filter: unset;
+
+        .footer-contacts__span {
+            @include font(1.4rem, 1.428, 500);
+        }
+
+        .footer-contacts__button {
+            max-width: 50rem;
+            margin-top: 2rem;
+        }
+
+        .footer-contacts__phone {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-contacts__phones {
+            margin-bottom: 2rem;
+        }
+
+        .footer-contacts__list {
+            margin-bottom: 2rem;
+        }
+
+        .page-footer__socials {
+            column-gap: 0.5rem;
+        }
+    }
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: block;
+        opacity: 0.55;
+        @include font(1.4rem, 1.428, 400, 0.5rem);
+
+        @include breakpoint(small-tablet) {
+            @include font(1.2rem, 1.666, 400, 0.5rem);
+        }
+    }
+ 
+    &__link {
+        @include font(2.4rem, 1.458, 600);
+
+        @include breakpoint(small-tablet) {
+            @include font(2rem, 1.25, 600);
+        }
+    }
+
+    &--smaller {
+        .phone__label {
+            @include font(1.2rem, 1.666, 400, 0.5rem);
+        }
+
+        .phone__link {
+            @include font(1.8rem, 1.11, 500);
+        }
+    }
+}
+
+.feedback {
+    &__body {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+        column-gap: 6rem;
+        padding: 7rem 8rem;
+
+        border-radius: 3rem;
+        background-color: var(--back-2, #f3f4f8);
+
+        &::before {
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            z-index: 1;
+    
+            display: block;
+            width: 14rem;
+            height: 17rem;
+    
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22134%22%20height%3D%22169%22%20viewBox%3D%220%200%20134%20169%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M103.34%2090.717H92.5332L70.3164%2035.7129H86.4706L98.2192%2069.3161L125.52%20-5.39941H141.862C129.21%2026.6644%20116.595%2058.6907%20103.905%2090.717H103.34ZM119.984%2074.4974V89.891H135.423V74.4974H119.984Z%22%20fill%3D%22%23EBECF2%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M104.47%2090.7168H115.277L137.494%20145.721H121.34L109.591%20112.118L82.2908%20186.833H65.9482C78.6005%20154.769%2091.2151%20122.743%20103.905%2090.7168H104.47ZM87.8261%20106.974V91.5803H72.3873V106.974H87.8261Z%22%20fill%3D%22%23EBECF2%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M33.8277%20203.128H23.0205L0.803711%20148.124H16.958L28.7065%20181.727L56.0068%20107.012H72.3493C59.697%20139.076%2047.0825%20171.102%2034.3926%20203.128H33.8277ZM50.5091%20186.871V202.265H65.9479V186.871H50.5091Z%22%20fill%3D%22%23EBECF2%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            content: "";
+    
+            @include breakpoint(portrait-tablet) {
+                width: 7.8rem;
+                height: 8.1rem;
+            }
+        }
+
+        @include breakpoint(desktop) {
+            column-gap: 4rem;
+            padding: 5rem 6rem;
+        }
+
+        @include breakpoint(laptop) {
+            column-gap: 2rem;
+            padding: 4rem 2rem;
+            border-radius: 1.5rem;
+        }
+        
+        @include breakpoint(portrait-tablet) {
+            flex-direction: column;
+            align-items: stretch;
+            column-gap: unset;
+        }
+    }
+
+    &__heading {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+
+        @include breakpoint(desktop) {
+            flex: 0 1 50%;
+        }
+
+        @include breakpoint(laptop) {
+            flex: 0 1 100%;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 2rem;
+        }
+
+        .h2 {
+            min-width: 21ch;
+            margin-bottom: 2rem;
+
+            @include breakpoint(desktop) {
+                min-width: unset;
+            }
+
+            @include breakpoint(portrait-tablet) {
+                max-width: 32ch;
+            }
+        }
+    }
+
+    &__form {
+        flex: 1 1 auto;
+        padding-left: 10.2rem;
+
+        border-style: solid;
+        border-color: #E2E5F0;
+        border-width: 0 0 0 1px;
+
+        @include breakpoint(desktop) {
+            padding-left: 6.2rem;
+        }
+        
+        @include breakpoint(laptop) {
+            padding-left: 3.2rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            padding-top: 2rem;
+            padding-left: unset;
+            border-width: 1px 0 0 0;
+        }
+    }
 }

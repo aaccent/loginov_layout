@@ -9,7 +9,8 @@
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(1, 18, 21, 0.50);
+    backdrop-filter: blur(3.4000000953674316px);
     visibility: hidden;
     opacity: 0;
     transition: opacity var(--transition-time), visibility var(--transition-time);
@@ -24,40 +25,288 @@
         position: absolute;
         top: 50%;
         left: 50%;
+
         display: none;
+
         width: 100%;
-        max-width: 80%;
+        max-width: 112.4rem;
         height: auto;
-        overflow: auto;
         max-height: 100%;
+
         background-color: var(--white, #fff);
-        border-radius: 0.6rem;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 3rem;
         transform: translate(-50%, -50%);
 
         &.modal-open {
             display: block;
         }
 
+        @include breakpoint(laptop) {
+            max-width: calc(100% - 3rem);
+            max-height: calc(100% - 8rem);
+        }
+
+        @include breakpoint(tablet) {
+            max-height: unset;
+            border-radius: 1.5rem;
+        }
     }
 
     &__close-btn {
         position: absolute;
-        top: 2rem;
-        right: 2rem;
+        left: calc(100% + 0.5rem);
+        bottom: calc(100% + 0.5rem);
         z-index: 2;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 2rem;
-        height: 2rem;
+
         background-color: transparent;
         border-radius: 50%;
         cursor: pointer;
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            fill-opacity: 0.1;
+            transition: fill-opacity var(--transition);
+
+            @include breakpoint(laptop) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        &:hover {
+            svg {
+                fill-opacity: 0.4;
+                
+                @include breakpoint(supersmall-mobile) {
+                    fill-opacity: 0;
+                }
+            }
+        }
+
+        @include breakpoint(laptop) {
+            left: unset;
+            bottom: calc(100% + 1.6rem);
+            right: 0;
+        }
+
+        @include breakpoint(supersmall-mobile) {
+            bottom: calc(100% - 2rem);
+            right: -1.2rem;
+
+            width: 3.2rem;
+            height: 3.2rem;
+            overflow: hidden;
+
+            background-color: var(--grey, #7e8397);
+            border-radius: 0.4rem;
+        }
+
+        @include portrait-orient() {
+            bottom: calc(100% - 2rem);
+            right: -1.2rem;
+            
+            overflow: hidden;
+
+            background-color: var(--grey, #7e8397);
+            border-radius: 0.4rem;
+        }
     }
 
     &__content {
         position: relative;
-        padding: 4rem 6rem;
+        padding: 1.5rem;
+
+        @include breakpoint(small-tablet) {
+            padding: 4rem 2rem;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        align-items: stretch;
+        column-gap: 3.5rem;
+
+        @include breakpoint(laptop) {
+            column-gap: 2rem;
+        }
+    }
+
+    &__form {
+        padding: 3rem 4.5rem;
+
+        @include breakpoint(laptop) {
+            width: 50%;
+            padding: 1rem 1.5rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 4rem;
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            max-width: 38.8rem;
+            font-weight: 500;
+
+            @include breakpoint(small-tablet) {
+                
+            }
+        }
+
+        @include breakpoint(laptop) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__block-inputs {
+        min-width: 45.4rem;
+
+        @include breakpoint(laptop) {
+            min-width: 100%;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        flex: 1 1 100%;
+        aspect-ratio: 1;
+        border-radius: 1.5rem;
+        background: var(--back-2, #f3f4f8);
+
+        @include breakpoint(laptop) {
+            flex: 0 1 50%;
+            aspect-ratio: unset;
+        }
+
+        @include breakpoint(small-tablet) {
+            display: none;
+        }
+
+        &--consultation {
+            aspect-ratio: 1 / 1.08;
+
+            .modal__image {
+                width: 100%;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        left: 50%;
+        bottom: -1.5rem;
+        z-index: 1;
+
+        transform: translateX(-50%);
+        width: 85%;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @include breakpoint(laptop) {
+            width: auto;
+            height: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
+        } 
+    }
+
+    &--success {
+        .modal__container {
+            max-width: 43rem;
+
+            @include breakpoint(portrait-tablet) {
+                max-width: 35rem;
+            }
+
+            @include breakpoint(supersmall-mobile) {
+                width: calc(100% - 3rem);
+            }
+        }
+
+        .modal__content {
+            padding: 4rem;
+
+            @include breakpoint(portrait-tablet) {
+                padding: 4rem 2rem 2rem;
+            }
+        }
+
+        .modal__heading {
+            margin-bottom: 4rem;
+            text-align: center;
+            
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+
+            @include breakpoint(portrait-tablet) {
+                margin-bottom: 2.5rem;
+            }
+        }
+        
+    }
+
+    &__success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__tick {
+        display: block;
+        width: 10rem;
+        height: 10rem;
+        margin-bottom: 3.5rem;
+
+        @include breakpoint(portrait-tablet) {
+            width: 8rem;
+            height: 8rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &--number {
+        .modal__container {
+            width: calc(100% - 3rem);
+            max-width: 35rem;
+            border-radius: 1.5rem;
+        }
+
+        .modal__content {
+            padding: 0.5rem;
+        }
+    }
+
+    &__checkboxes {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }

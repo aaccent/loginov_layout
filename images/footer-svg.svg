@@ -1,0 +1,7 @@
+<svg id="footer-svg" xmlns="http://www.w3.org/2000/svg" width="391" height="371" viewBox="0 0 391 371" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M242.109 521H163.967L2 223.556H119.924L205.169 404.976L402.656 1H522C429.65 173.982 338.721 346.963 246.371 521H242.109ZM362.874 433.454V516.781H475.115V433.454H362.874Z" stroke="#fff" stroke-width="2" stroke-miterlimit="10">
+        <animate id="project_anim1" attributeName="stroke"
+        from="#fff" to="#FFFF20" begin="0s" dur="3s"
+        fill="freeze" repeatCount="indefinite" />
+    </path>
+</svg>

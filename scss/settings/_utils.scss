@@ -78,3 +78,17 @@ textarea:required:valid {
     top: 0;
     width: 100%;
 }
+
+.title-decorated {
+    span {
+        display: inline;
+    }
+    
+    &__dark {
+        color: var(--black, #231F20);
+    }
+
+    &__grey {
+        color: var(--grey-2, #a4a8b8)
+    }
+}

@@ -1,0 +1,33 @@
+.input {
+    width: 100%;
+    height: 6rem;
+    padding: 1.8rem 2rem 1.7rem;
+
+    background: var(--back-2, #f3f4f8);
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+
+    @include font(1.5rem, 1.666, 500);
+    
+    @include placeholder {
+        color: var(--grey, #7e8397);
+        @include font(1.5rem, 1.666, 500);
+    }
+
+    @include breakpoint(small-tablet) {
+        height: 5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 0.7rem;
+
+        @include font(1.4rem, 1.4286, 500);
+    
+        @include placeholder {
+            @include font(1.2rem, 1.4286, 500);
+        }
+    }
+
+    &--white {
+        background: var(--white, #FFF);
+    }
+}

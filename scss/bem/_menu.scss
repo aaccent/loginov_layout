@@ -1,0 +1,134 @@
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 3rem;
+
+        @include breakpoint(large-desktop) {
+            column-gap: 2rem;
+        }
+    }
+
+    &__link {
+        @include font(1.6rem, 1.25, 500);
+
+        position: relative;
+        display: block;
+        cursor: pointer;
+        color: inherit;
+        white-space: nowrap;
+
+        &::before {
+            position: absolute;
+            top: calc(100% + 1rem);
+            left: 50%;
+
+            width: 0;
+            max-width: 100%;
+            height: 0.15rem;
+            min-height: 1.5px;
+
+            transform: translateX(-50%);
+            background-color: var(--blue, #00A9C1);
+            content: "";
+            transition: width 0.3s ease-out;
+        }
+
+        &:hover,
+        &--active {
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &--with-arrow {
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 1;
+
+                width: 8px;
+                height: 12px;
+
+                background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%2212%22%20viewBox%3D%220%200%208%2012%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%2011L6%206L1%201%22%20stroke%3D%22%2300A9C1%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                content: "";
+            }
+        }
+    }
+
+    &--vertical {
+        .menu__list {
+            flex-direction: column;
+            align-items: flex-start; 
+            column-gap: unset;
+
+            li {
+                margin-bottom: 3.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                @include breakpoint(tablet) {
+                    margin-bottom: 2.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @include breakpoint(small-tablet) {
+                    margin-bottom: 1.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &--bigger {
+        .menu__link {
+            @include font(2rem, 1, 500);
+
+            @include breakpoint(small-tablet) {
+                @include font(1.6rem, 1.25, 500);
+            }
+        }
+    }
+
+    &--smaller {
+        .menu__list {
+            align-items: stretch;
+
+            li {
+                margin-bottom: 2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .menu__link {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            @include font(2.4rem, 1.25, 500);
+
+            &::before {
+                content: none;
+            }
+
+            @include breakpoint(small-tablet) {
+                @include font(1.8rem, 1.111, 500);
+            }
+        }
+    }
+}

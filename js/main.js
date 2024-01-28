@@ -1,13 +1,18 @@
 import Modal from "./modules/Modal.js";
 import Map from "./modules/Map.js";
 
-// import validation from './modules/validation.js';
-// import masks from './modules/masks.js';
+import {validation} from './modules/validation.js';
+import masks from './modules/masks.js';
 // import lazyload from './modules/lazyload.js';
 
 // import fancybox from './modules/fancybox.js';
 
 import setHeaderPadding from './modules/setHeaderPadding.js';
+import dropdownOpenOnClick from './modules/dropdownOpenOnClick.js';
+import dropdownListControl from './modules/dropdownListControl.js';
+import menuDropdownsOpens from './modules/menuDropdownsOpens.js';
+import menuSwiperControl from './modules/menuSwiperControl.js';
+import openMobileMenu from './modules/openMobileMenu.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -44,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // masks and validation:
-    // validation();
-    // masks();
+    validation();
+    masks();
 
     // lazyload for images, videos, iframes and objects:
     // lazyload();
@@ -55,4 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // other scripts:
     setHeaderPadding();
+    dropdownOpenOnClick();
+    dropdownListControl();
+    menuDropdownsOpens();
+    menuSwiperControl();
+    openMobileMenu();
 })

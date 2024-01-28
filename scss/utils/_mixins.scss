@@ -1,6 +1,6 @@
 @import '_variables.scss';
 
-@mixin font($size: 1.6rem, $line-height: 1.375, $weight: 400, $bottom: false) {
+@mixin font($size: 1.6rem, $line-height: 1.5625, $weight: 400, $bottom: false) {
     margin: 0;
     font-family: var(--main-ff, Arial);
     font-weight: $weight;
@@ -18,6 +18,14 @@
 }
 
 @mixin h2 {
+    @include font(4.4rem, 1.14, 600);
+
+    @include breakpoint(portrait-tablet) {
+        @include font(2.6rem, 1.153, 600);
+    }
+}
+
+@mixin h3 {
     @include font(5.2rem, 1.25, 600, $size-24);
 }
 
@@ -195,13 +203,19 @@
     }
 
     @else if $class == laptop {
-        @media only screen and (max-width: (1200px)) {
+        @media only screen and (max-width: (1280px)) {
             @content;
         }
     }
 
     @else if $class == tablet {
-        @media only screen and (max-width: (1024px)) {
+        @media only screen and (max-width: (1199px)) {
+            @content;
+        }
+    }
+
+    @else if $class == portrait-tablet {
+        @media only screen and (max-width: (992px)) {
             @content;
         }
     }
@@ -225,7 +239,7 @@
     }
 
     @else if $class == supersmall-mobile {
-        @media only screen and (max-width: (370px)) {
+        @media only screen and (max-width: (379px)) {
             @content;
         }
     }
@@ -239,7 +253,7 @@
     }
 
     @else if $class == desktop {
-        @media only screen and (min-width: 1201px) {
+        @media only screen and (min-width: 1281px) {
             @content;
         }
     }
@@ -272,5 +286,11 @@
         @media only screen and (min-width: 577px) {
             @content;
         }
+    }
+}
+
+@mixin portrait-orient() {
+    @media only screen and (max-height: 577px) {
+        @content;
     }
 }

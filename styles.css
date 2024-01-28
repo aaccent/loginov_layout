@@ -2,23 +2,31 @@
 
 :root {
     /* layout: */
-    --max-container-width: 184rem;
+    --max-container-width: 140rem;
+    --max-header-container-width: 184rem;
     --content-padding: 1rem;
 
     /* colors: */
-    --accent: orange;
+    --blue: #00a9c1;
+    --blue-hover: #0097ac;
+    --blue-op-01: rgba(0, 169, 193, 0.10);
+    --blue-op-015: rgba(0, 169, 193, 0.15);
     --title: #111;
     --text: #333;
-    --back: #eee;
+    --back: #03262c;
+    --back-2: #f3f4f8;
     --white: #fff;
-    --black: #000;
+    --black: #231f20;
+    --grey: #7e8397;
+    --grey-2: #a4a8b8;
+    --red: brick;
 
     /* typography: */
     --main-ff: 'Montserrat', sans-serif;
     --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
     /* etc.: */
-    --transition: 0.3s ease;
+    --transition: 0.3s ease-out;
 }
 
 @media only screen and (min-width: 577px) {

@@ -1,0 +1,53 @@
+.breadcrumbs {
+    padding: 2.5rem 0;
+
+    @include breakpoint(portrait-tablet) {
+        padding: 1.5rem 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 2.8rem;
+
+        @include breakpoint(portrait-tablet) {
+            column-gap: 2rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: -1.8rem;
+            z-index: 1;
+            display: block;
+            width: 0.8rem;
+            height: 1rem;
+            transform: translateY(-50%);
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2211%22%20viewBox%3D%220%200%2010%2011%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%202L5%206L1%2010%22%20stroke%3D%22%237E8397%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M5%202L9%206L5%2010%22%20stroke%3D%22%237E8397%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            content: "";
+
+            @include breakpoint(portrait-tablet) {
+                right: -1.4rem;
+            }
+        }
+
+        &:last-child::before {
+            content: none;
+        }
+    }
+
+    &__link {
+        color: var(--grey, #7e8397);
+
+        &--disabled {
+            color: var(--black, #231F20);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.developer {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+
+    span {
+        opacity: 0.55;
+    }
+
+    svg {
+        width: 10.9rem;
+        height: 3rem;
+        fill-opacity: 0.45;
+
+        transition: var(--transition);
+    }
+
+    &:hover {
+        svg {
+            fill-opacity: 1;
+        }
+    }
+
+    @include breakpoint(portrait-tablet) {
+        svg {
+            width: 9rem;
+            height: 2.5rem;
+        }
+    }
+}

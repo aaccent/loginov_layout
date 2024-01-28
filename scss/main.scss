@@ -19,9 +19,26 @@
 @import 'layouts/page-footer';
 // @import 'layouts/grid';
 
+// LIBS:
+@import url('https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css');
 
 //UI:
 @import 'ui/button';
+@import 'ui/social';
+@import 'ui/hamburger';
+@import 'ui/input';
+@import 'ui/radio';
 
 //BEM:
 @import 'bem/logo';
+@import 'bem/menu';
+@import 'bem/contacts';
+@import 'bem/contact';
+@import 'bem/breadcrumbs';
+@import 'bem/mobile-menu';
+@import 'bem/menu-dropdown';
+@import 'bem/inputs-block';
+@import 'bem/author';
+@import 'bem/copyright';
+@import 'bem/developer';
+

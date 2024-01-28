@@ -3,6 +3,29 @@
     align-items: center;
     justify-content: center;
 
-    width: 12.8rem;
-    height: 5rem;
+    .icon {        
+        width: 12.8rem;
+        height: 5rem;
+    }
+
+    &--main {
+        @include breakpoint(laptop) {
+            .icon {
+                width: 10.2rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    &--big {
+        .icon {
+            width: 20.5rem;
+            height: 8rem;
+
+            @include breakpoint(laptop) {
+                width: 12.8rem;
+                height: 5rem;    
+            }
+        }
+    }
 }

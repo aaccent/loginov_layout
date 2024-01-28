@@ -1,7 +1,7 @@
 // site main container:
 [class*="__site-container"] {
     width: 100%;
-    max-width: calc(var(--max-container-width, 184rem) + 2 * var(--content-padding, 2rem));
+    max-width: calc(var(--max-container-width, 140rem) + 2 * var(--content-padding, 2rem));
     margin: 0 auto;
     padding: 0 var(--content-padding, 2rem);
 
@@ -12,7 +12,7 @@
 }
 
 .page-main {
-    flex: 1 0 auto;
+    flex: 1 0 auto; 
     display: flex;
     flex-direction: column;
 }

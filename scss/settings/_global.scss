@@ -1,13 +1,9 @@
 html {
-    font-size: 8px;
+    font-size: 10px;
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
 
-    @include breakpointMF(mobile) {
-        font-size: 10px;
-    }
-
-    @include breakpointMF(tablet) {
+    @include breakpointMF(desktop) {
         font-size: 10px;
         font-size: unquote("clamp(9px, 0.52vw, 25px)");
     }
@@ -18,11 +14,15 @@ html {
 body {
     position: relative;
     min-width: 319px;
-    color: var(--text, #333);
+    color: var(--black, #231f20);
     text-rendering: optimizeSpeed;
     scroll-behavior: smooth;
 
     @include text-default;
+
+    @include breakpoint(portrait-tablet) {
+        @include font(1.4rem, 1.428, 400);
+    }
 }
 
 .h1 {
@@ -35,3 +35,12 @@ body {
 
 @include color('white', var(--white, #fff));
 @include color('text', var(--text, #333));
+@include color('back', var(--back, #03262c));
+
+
+.body--main-page,
+.wrapper--main-page {
+    .page-header__breadcrumbs {
+        @include visuallyHidden;
+    }
+}

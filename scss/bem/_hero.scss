@@ -1,0 +1,260 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    height: 100vh;
+    height: 100dvh;
+
+    @include breakpoint(tablet) {
+        height: auto;
+        min-height: calc(100vh - 3rem);
+        min-height: calc(100dvh - 3rem);
+    }
+
+    .page-header__site-container {
+        flex-grow: 1;
+        padding-top: var(--header-height);
+        
+        @include breakpoint(portrait-tablet) {
+            max-width: calc(100% - 1rem);
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            top: calc(100% + 2rem);
+            left: 50%;
+
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+            
+            width: 70%;
+            transform: translateX(-50%);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            @include breakpoint(tablet) {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+
+            .swiper-pagination-bullet {
+                flex-grow: 1;
+                height: 3px;
+                border-radius: 1.5px;
+                background-color: var(--blue, #00a9c1);
+                opacity: 0.25;
+            }
+
+            .swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__inner-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 3rem;
+        background-color: var(--back-2, #f3f4f8);
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+
+            height: 100%;
+            aspect-ratio: 1 / 1.07;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22727%22%20height%3D%22775%22%20viewBox%3D%220%200%20727%20775%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M630.795%20153.693L713.718%20-73.9482H762.346C753.481%20-51.4131%20744.622%20-28.884%20735.765%20-6.35968C706.301%2068.5683%20676.858%20143.444%20647.281%20218.32H645.903H613.367L546.19%2051.4928H594.233L629.853%20153.687L630.315%20155.012L630.795%20153.693ZM742.993%20215.8H697.03V169.831H742.993V215.8Z%22%20stroke%3D%22%2300A4C0%22%2F%3E%0A%3Cpath%20d%3D%22M664.447%20283.947L581.524%20511.589H532.896C541.76%20489.056%20550.618%20466.529%20559.474%20444.007C588.939%20369.077%20618.383%20294.199%20647.961%20219.32H649.339H681.875L749.052%20386.148H701.009L665.389%20283.954L664.927%20282.629L664.447%20283.947ZM552.249%20221.955H598.211V267.924H552.249V221.955Z%22%20stroke%3D%22%23EAD900%22%2F%3E%0A%3Cpath%20d%3D%22M616.821%20662.103L699.744%20434.461H748.372C739.508%20456.993%20730.65%20479.52%20721.794%20502.041C692.329%20576.972%20662.885%20651.851%20633.307%20726.73H631.929H599.393L532.216%20559.902H580.259L615.879%20662.096L616.341%20663.421L616.821%20662.103ZM729.019%20724.095H683.057V678.126H729.019V724.095Z%22%20stroke%3D%22%2300A4C0%22%2F%3E%0A%3Cpath%20d%3D%22M650.473%20792.356L567.55%201020H518.922C527.787%20997.465%20536.645%20974.938%20545.501%20952.416C574.965%20877.486%20604.409%20802.608%20633.987%20727.729H635.365H667.901L735.079%20894.557H687.036L651.415%20792.363L650.954%20791.038L650.473%20792.356ZM538.275%20730.364H584.238V776.333H538.275V730.364Z%22%20stroke%3D%22%2300A4C0%22%2F%3E%0A%3Cpath%20d%3D%22M419.35%20496.681L502.273%20269.039H550.9C542.016%20291.622%20533.139%20314.199%20524.263%20336.772C494.818%20411.652%20465.394%20486.48%20435.836%20561.308H434.458H401.922L334.744%20394.48H382.787L418.408%20496.674L418.869%20497.999L419.35%20496.681ZM531.662%20558.673H485.7V512.704H531.662V558.673Z%22%20stroke%3D%22%2300A4C0%22%2F%3E%0A%3Cpath%20d%3D%22M453.117%20626.935L370.194%20854.576H321.566C330.43%20832.043%20339.288%20809.516%20348.145%20786.994C377.609%20712.064%20407.053%20637.186%20436.631%20562.308H438.009H470.545L537.722%20729.135H489.679L454.059%20626.941L453.597%20625.616L453.117%20626.935ZM340.804%20564.942H386.767V610.911H340.804V564.942Z%22%20stroke%3D%22%23EAD900%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            content: "";
+
+            @include breakpoint(tablet) {
+                top: unset;
+                bottom: 0;
+                height: 50%;
+            }
+        }
+
+        @include breakpoint(portrait-tablet) {
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 30;
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        max-width: calc(var(--max-container-width, 140rem) + 2 * var(--content-padding, 2rem));
+        height: 100%;
+        margin: 0 auto;
+
+        @include breakpoint(desktop) {
+            padding: 0 2rem;
+        }
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__left-block {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin-right: -5rem;
+        max-width: 60%;
+        padding: 13% 0;
+
+        @include breakpoint(desktop) {
+            max-width: 70%;
+            padding: 5% 0;
+        }
+
+        @include breakpoint(tablet) {
+            flex: 0 1 auto;
+            max-width: 100%;
+            margin-right: unset;
+            padding: 6rem 0 0;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            height: 100%;
+            margin: unset;
+        }
+    }
+
+    &__right-block {
+        flex-grow: 1;
+        max-width: 45%;
+
+        @include breakpoint(desktop) {
+            max-width: 40%;
+        }
+
+        @include breakpoint(tablet) {
+            flex: 1 0 50%;
+            max-width: 100%;
+            aspect-ratio: 1 / 1.07;
+        }
+
+        .hero__swiper {
+            &.swiper {
+                padding-top: 4rem;
+
+                @include breakpoint(tablet) {
+                    overflow: visible;
+                }
+            }
+        }
+    }
+
+    &__swiper-slide {
+        height: 100%;
+    }
+}
+
+.hero-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        justify-content: unset;
+        align-items: stretch;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+        
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 1.5rem;
+        }
+        
+        @include breakpoint(mobile) {
+            display: inline-block;
+        }
+    }
+
+    &__text {
+        max-width: 71.6rem;
+        @include font(1.8rem, 1.388, 400);
+        @include maxSizeText(6);
+
+        @include breakpoint(portrait-tablet) {
+            @include font(1.4rem, 1.4285, 400);
+        }
+    }
+
+    &__heading {
+        margin-bottom: 4rem;
+    }
+
+    &__buttons,
+    &__swiper-controls {
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
+    }
+
+    &__swiper-controls {
+        column-gap: 1rem;
+
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden;
+        }
+    }
+
+    &__link {
+        &.button--link {
+            @include breakpoint(small-tablet) {
+                width: 100%;
+                max-width: unset;
+            }
+        }
+    }
+}
+
+.image-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 3.2rem;
+        z-index: 1;
+
+        display: block;
+        height: 100%;
+        object-position: bottom center;
+        object-fit: contain;
+
+        @include breakpoint(tablet) {
+            left: 50%;
+            right: unset;
+            transform: translateX(-50%);
+        }
+    }
+}

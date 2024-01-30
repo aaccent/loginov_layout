@@ -13,6 +13,9 @@ import dropdownListControl from './modules/dropdownListControl.js';
 import menuDropdownsOpens from './modules/menuDropdownsOpens.js';
 import menuSwiperControl from './modules/menuSwiperControl.js';
 import openMobileMenu from './modules/openMobileMenu.js';
+import heroMainSwiper from './modules/heroMainSwiper.js';
+import reviewsSwiperControl from './modules/reviewsSwiperControl.js';
+import partnershipSwiperAnimation from './modules/partnershipSwiperAnimation.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -65,4 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     menuDropdownsOpens();
     menuSwiperControl();
     openMobileMenu();
+
+    heroMainSwiper();
+    reviewsSwiperControl();
+    partnershipSwiperAnimation();
 })

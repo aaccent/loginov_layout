@@ -20,7 +20,8 @@
 // @import 'layouts/grid';
 
 // LIBS:
-@import url('https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css');
+@import '../js/libs/swiper/swiper.scss';
+@import '../js/libs/swiper/modules/effect-fade.scss';
 
 //UI:
 @import 'ui/button';
@@ -28,6 +29,9 @@
 @import 'ui/hamburger';
 @import 'ui/input';
 @import 'ui/radio';
+@import 'ui/slider-button';
+@import 'ui/expand';
+@import 'ui/map-link';
 
 //BEM:
 @import 'bem/logo';
@@ -41,4 +45,14 @@
 @import 'bem/author';
 @import 'bem/copyright';
 @import 'bem/developer';
+// sections =>
+@import 'bem/hero';
+@import 'bem/activities';
+@import 'bem/activity';
+@import 'bem/citation';
+@import 'bem/presentation';
+@import 'bem/statistics';
+@import 'bem/quatro';
+@import 'bem/reviews';
+@import 'bem/partnership';
 

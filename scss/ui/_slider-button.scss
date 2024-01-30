@@ -1,0 +1,37 @@
+.slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    width: 6rem;
+    height: 6rem;
+
+    background-color: var(--white, #fff);
+    border-radius: 1rem;
+    transition: background-color var(--transition);
+    cursor: pointer;
+
+    .icon {
+        width: 100%;
+        height: 100%;
+        stroke: var(--blue, #00a9c1);
+    }
+
+    .icon--reverse {
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        background-color: var(--blue-hover-2, #ddeff4);
+    }
+
+    &--blue {
+        background-color: var(--back-4, #ebf9fa);
+    }
+    
+    @include breakpoint(laptop) {
+        width: 5rem;
+        height: 5rem;
+    }
+}

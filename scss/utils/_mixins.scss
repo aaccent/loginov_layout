@@ -14,19 +14,27 @@
 }
 
 @mixin h1 {
-    @include font(7rem, 1.15, 600, $size-32);
+    @include font(6.2rem, 0.9677, 600);
+
+    @include breakpoint(laptop) {
+        @include font(3.2rem, 1.0937, 600);
+    }
 }
 
 @mixin h2 {
     @include font(4.4rem, 1.14, 600);
 
-    @include breakpoint(portrait-tablet) {
+    @include breakpoint(laptop) {
         @include font(2.6rem, 1.153, 600);
     }
 }
 
 @mixin h3 {
-    @include font(5.2rem, 1.25, 600, $size-24);
+    @include font(2.8rem, 1.25, 600);
+
+    @include breakpoint(laptop) {
+        @include font(2rem, 1.153, 600);
+    }
 }
 
 @mixin text {
@@ -264,7 +272,7 @@
         }
     }
 
-    @else if $class == portait-tablet {
+    @else if $class == portrait-tablet {
         @media only screen and (min-width: 992px) {
             @content;
         }

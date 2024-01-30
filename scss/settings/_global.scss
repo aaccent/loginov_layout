@@ -33,6 +33,10 @@ body {
     @include h2;
 }
 
+.h3 {
+    @include h3;
+}
+
 @include color('white', var(--white, #fff));
 @include color('text', var(--text, #333));
 @include color('back', var(--back, #03262c));

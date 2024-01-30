@@ -4,7 +4,7 @@
     justify-content: center;
     max-height: 6rem;
     padding: 2rem 4rem;
-
+    text-align: center;
     background-color: var(--blue, #00a9c1);
     border-radius: 1rem;
 
@@ -16,6 +16,10 @@
         color: var(--white, #FFF);
         transition: color var(--transition);
         white-space: nowrap;
+    }
+
+    &--link {
+        max-width: max-content;
     }
 
     @include breakpointMF(tablet) {
@@ -33,4 +37,16 @@
             @include font(1.4rem, 1.4285, 600);
         }
     } 
+
+    &--secondary {
+        background-color: var(--blue-op-01, rgba(0, 169, 193, 0.10));
+
+        span {
+            color: var(--blue, #00A9C1);
+        }
+        
+        @include hover {
+            background-color: var(--blue-op-015, rgba(0, 169, 193, 0.15));       
+        }
+    }
 }

@@ -1,0 +1,19 @@
+.map-link {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    cursor: pointer;
+
+    .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--yellow, #efef00);
+        transition: fill var(--transition);
+    }
+
+    &:hover {
+        .icon {
+            fill: var(--blue, #00A9C1);
+        }
+    }
+}

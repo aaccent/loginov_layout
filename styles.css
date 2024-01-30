@@ -9,17 +9,22 @@
     /* colors: */
     --blue: #00a9c1;
     --blue-hover: #0097ac;
+    --blue-hover-2: #ddeff4;
     --blue-op-01: rgba(0, 169, 193, 0.10);
     --blue-op-015: rgba(0, 169, 193, 0.15);
+    --blue-op-008: rgba(0, 169, 193, 0.08);
     --title: #111;
     --text: #333;
     --back: #03262c;
     --back-2: #f3f4f8;
+    --back-3: #f5f6f9;
+    --back-4: #ebf9fa;
     --white: #fff;
     --black: #231f20;
     --grey: #7e8397;
     --grey-2: #a4a8b8;
     --red: brick;
+    --yellow: #efef00;
 
     /* typography: */
     --main-ff: 'Montserrat', sans-serif;
@@ -35,13 +40,13 @@
     }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
     :root {
         --content-padding: 2rem;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1280px) {
     :root {
         --content-padding: 4rem;
     }

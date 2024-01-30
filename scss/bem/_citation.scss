@@ -1,0 +1,93 @@
+.citation {
+    &__inner-wrapper {
+        &.hero__inner-wrapper {
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &__site-container {
+        @include breakpoint(laptop) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+        padding: 8rem 0;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+
+            width: 34.5rem;
+
+            opacity: 0.1;
+            aspect-ratio: 2.55 / 1;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22303%22%20height%3D%22119%22%20viewBox%3D%220%200%20303%20119%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M248.497%20369.402H283.882L356.552%20188.867H303.666L265.191%20299.11L175.922%2053.9419H122.465C163.794%20159.095%20205.171%20264.249%20246.595%20369.402H248.497ZM193.995%20316.088V366.596H143.487V316.088H193.995Z%22%20fill%3D%22%23A0A5BA%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M17.4071%200.532715H-17.977L-90.6475%20181.068H-37.7616L0.713837%2070.8253L90.0301%20315.993H143.487C102.158%20210.84%2060.7811%20105.686%2019.357%200.532715H17.4071ZM71.91%2053.8466V3.33871H122.418V53.8466H71.91Z%22%20fill%3D%22%23A0A5BA%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            content: "";
+
+            @include breakpoint(laptop) {
+                width: 28.5rem;
+            }            @include breakpoint(laptop) {
+                width: 28.5rem;
+            }
+
+            @include breakpoint(portrait-tablet) {
+                content: none;
+            }
+        }
+
+        @include breakpoint(laptop) {
+            padding: 4rem 0;
+        }
+    }
+
+    &__inner-author {
+        &.author {
+            align-items: flex-start;
+            
+            .author__userpic {
+                overflow: visible;
+                width: unset;
+                height: unset;
+
+                > img {
+                    display: none;
+
+                    @include breakpoint(laptop) {
+                        display: block;
+                    }
+                }
+
+                .icon {
+                    width: 3rem;
+                    height: 2.5rem;
+                    margin-top: 0.4rem;
+
+                    @include breakpoint(laptop) {
+                        display: none;
+                    }
+                }
+
+                @include breakpoint(laptop) {
+                    width: 7rem;
+                    height: 7rem;
+                    overflow: hidden;
+                    border: 3px solid var(--white, #FFF);
+                }
+            }
+
+            @include breakpoint(laptop) {
+                align-items: center;
+            }
+        }
+    }
+}

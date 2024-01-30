@@ -30,18 +30,14 @@
 }
 
 .section {
-    padding: 1.5rem 0;
+    margin-top: 16rem;
 
-    &:first-child {
-        padding: 3rem 0 1.5rem;
-    }
+    &__header {
+        margin-bottom: 4.5rem;
 
-    &:last-child {
-        padding: 1.5rem 0 3rem;
-    }
-
-    &__body {
-        min-height: 60vh;
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 2.5rem;
+        }
     }
 }
 

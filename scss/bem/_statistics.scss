@@ -1,0 +1,56 @@
+.statistics {
+    display: flex;
+    align-items: stretch;
+    column-gap: 4rem;
+    padding: 2.5rem 3rem;
+    border-radius: 1rem;
+    background-color: var(--blue-op-008, rgba(0, 169, 193, 0.08));
+
+    @include breakpoint(tablet) {
+        flex-direction: column;
+        padding: 2rem;
+        column-gap: unset;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+
+        &:first-child {
+            padding-right: 4rem;
+            border-style: solid;
+            border-color: #C9EAEC;
+            border-width: 0 1px 0 0;
+
+            @include breakpoint(tablet) {
+                margin-bottom: 2.5rem;
+                padding-right: unset;
+                border-width: 0;
+            }        
+        }
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+        } 
+    }
+
+    &__count {
+        color: var(--blue, #00A9C1);
+        line-height: 0.806;
+
+        &--plus {
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: "+";
+            }
+        }
+
+        @include breakpoint(tablet) {
+            margin-bottom: 0.5rem;
+        }
+    }
+}

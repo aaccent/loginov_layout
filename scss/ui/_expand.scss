@@ -4,6 +4,13 @@
     &::before {
         color: var(--blue, #00a9c1);
         font-weight: 600;
+        transition: color var(--transition);
         content: attr(data-text);
+    }
+
+    &:hover {
+        &::before {
+            color: var(--blue-hover, #0097ac);
+        }
     }
 }

@@ -10,8 +10,20 @@
         align-items: center;
         column-gap: 2.8rem;
 
+        @include breakpoint(desktop) {
+            padding-left: 1rem;
+        }
+
         @include breakpoint(portrait-tablet) {
             column-gap: 2rem;
+        }
+  
+        @include breakpoint(small-mobile) {
+            padding-left: unset;
+        }
+  
+        @include breakpoint(supersmall-mobile) {
+            padding-left: 0.5rem;
         }
     }
 

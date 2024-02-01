@@ -39,6 +39,30 @@
             margin-bottom: 2.5rem;
         }
     }
+
+    &--overflow-hidden {
+        overflow: hidden;
+    }
+
+    @include breakpoint(laptop) {
+        margin-top: 10rem;
+    }
+
+    @include breakpoint(portrait-tablet) {
+        margin-top: 7.8rem;
+    }
+
+    &--secondary {
+        margin-top: 6rem;
+
+        @include breakpoint(laptop) {
+            margin-top: 5rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            margin-top: 3rem;
+        }
+    }
 }
 
 ._intro-padding-top {

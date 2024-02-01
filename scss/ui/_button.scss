@@ -32,6 +32,7 @@
 
     @include breakpoint(small-tablet) {
         max-height: 5rem;
+        border-radius: 0.7rem;
         
         span {
             @include font(1.4rem, 1.4285, 600);
@@ -45,6 +46,18 @@
             color: var(--blue, #00A9C1);
         }
         
+        @include hover {
+            background-color: var(--blue-op-015, rgba(0, 169, 193, 0.15));       
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+
+        span {
+            color: var(--blue, #00A9C1);
+        }
+
         @include hover {
             background-color: var(--blue-op-015, rgba(0, 169, 193, 0.15));       
         }

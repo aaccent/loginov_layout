@@ -6,7 +6,7 @@ export default () => {
 
     revSwipers.forEach(revSwiperBox => {
         const revSwiper = new Swiper(revSwiperBox, {
-            slidesPerView: 1.1,
+            slidesPerView: 1.06,
             spaceBetween: 10,
             speed: 900,
             // autoHeight: true,
@@ -20,7 +20,7 @@ export default () => {
                 992: {
                     slidesPerView: 1,
                 }
-              }
+            }
         })
     })
 }

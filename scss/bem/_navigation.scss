@@ -1,0 +1,29 @@
+.navigation {
+    display: flex;
+    align-items: stretch;
+    column-gap: 0.3rem;
+    width: max-content;
+    height: 6rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    border: 1px solid #E5E6EA;
+
+    &__link {
+        &.button--transparent {
+            border-radius: 0.7rem;
+            height: 100%;
+            padding: 1.7rem 4rem;
+        }
+        
+        &--active {
+            &.button--transparent {
+                background-color: var(--blue-hover, #0097ac);   
+                pointer-events: none;
+
+                span {
+                    color: var(--white, #FFF);
+                }
+            }
+        }
+    }
+}

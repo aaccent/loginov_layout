@@ -42,7 +42,7 @@
         display: flex;
         align-items: center;
         column-gap: 1rem;
-        padding: 4rem 0 4rem 4rem;
+        padding: 5rem 0 4rem 4rem;
 
         .button {
             width: 100%;
@@ -81,12 +81,16 @@
 
     &__services {
         height: 100%;
-        padding: 3rem;
+        padding: 2.9rem 3.5rem;
         background: var(--white, #fff);
         border-radius: 2rem;
 
         @include breakpoint(laptop) {
-            padding: 2rem;
+            padding: 2rem 2rem 1rem;
+        }
+
+        .expand {
+            margin-top: 1.8rem;
         }
     }
 
@@ -108,13 +112,17 @@
 
         @include breakpoint(small-tablet) {
             column-gap: 0.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
     }
 
     &__text {
         padding-right: 2rem;
         color: var(--grey, #7e8397);
+
+        @include breakpoint(small-tablet) {
+            padding-right: unset;
+        }
     }
 
     &__list-title {
@@ -137,7 +145,8 @@
     &__list {
         li {
             display: none;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            
 
             &:last-child {
                 margin-bottom: 0;
@@ -151,6 +160,10 @@
                 &:nth-child(-n + 5) {
                     display: block;
                 }
+            }
+
+            @include breakpoint(small-tablet) {
+                margin-bottom: 1rem;
             }
         }
     }

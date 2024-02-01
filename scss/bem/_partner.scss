@@ -1,0 +1,77 @@
+.partner {
+    width: 33.5rem;
+    height: 24rem;
+    border-radius: 2rem;
+    background-color: var(--white, #FFF);
+
+    @include breakpoint(portrait-tablet) {
+        width: 26rem;
+        height: 17.5rem;
+        border-radius: 1rem;
+    }
+
+    &__body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    &__image {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 60%;
+            display: block;
+            object-fit: contain;
+            object-position: center;
+            
+            @include breakpoint(portrait-tablet) {
+                width: 50%;
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        left: 0;
+        bottom: 2rem;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        width: 100%;
+        height: max-content;
+        padding: 0 2.5rem;
+
+        line-height: 1.25;
+        white-space: nowrap;
+
+        color: var(--grey, #7e8397);
+        
+        &::before {
+            display: flex;
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color:  var(--blue, #00A9C1);
+            border-radius: 100%;
+            content: "";
+        }
+    }
+
+    &--flex {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.39 / 1;
+        border: 1px solid rgba(223, 224, 228, 0.70);
+
+        @include breakpoint(mobile) {
+            aspect-ratio: 1.94 / 1;
+        }
+    }
+}

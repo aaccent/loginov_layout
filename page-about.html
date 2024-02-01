@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+    <title>О компании</title>
+    <meta name="description" content="Simple Starter 2.0 Description ">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:image" content="images/preview.jpg">
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="preload">
+    <div class="wrapper">
+        <!-- #### page header section with dropdwon-menu, mobile-menu, breadcrumbs #### -->
+        <header class="page-header fix-block">
+            <div class="page-header__inner-wrapper">
+                <div class="page-header__site-container page-header__site-container--desktop">
+                    <a href="/" class="logo">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+
+                    <nav class="page-header__nav menu">
+                        <ul class="menu__list">
+                            <li>
+                                <a href="#" class="menu__link menu__link--dropdown js-header-dropdown">Услуги</a>
+                            </li>
+                            <li>
+                                <a href="./page-about.html" class="menu__link">О компании</a>
+                            </li>
+                            <li>
+                                <a href="./page-cases.html" class="menu__link">Наши кейсы</a>
+                            </li>
+                            <li>
+                                <a href="./page-partners.html" class="menu__link">Партнерам</a>
+                            </li>
+                            <li>
+                                <a href="./page-blog.html" class="menu__link">Блог</a>
+                            </li>
+                            <li>
+                                <a href="./page-contacts.html" class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="page-header__buttons">
+                        <div class="page-header__contacts contacts">
+                            <div class="contacts__row">
+                                <div class="contacts__item contact contact--one">
+                                    <a href="tel:+79765432100" class="contact__phone">
+                                        8 (976) 543-21-00
+                                    </a>
+                                    <span class="contact__city">
+                                        Москва
+                                    </span>
+                                </div>
+                                <div class="contacts__item contact contact--two">
+                                    <a href="tel:+79765432100" class="contact__phone">
+                                        8 (976) 543-21-00
+                                    </a>
+                                    <span class="contact__city">
+                                        Казахстан
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="social">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#tg"></use>
+                            </svg>
+                        </a>
+
+                        <button data-path="modal-call" class="button button--main">
+                            <span>Заказать звонок</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="page-header__site-container page-header__site-container--mobile">
+                    <a href="/" class="logo logo--main">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+
+                    <div class="page-header__buttons page-header__buttons--mobile">
+
+                        <button type="button" data-path="modal-number" class="contact contact--button contact--two">
+                            <i class="contact__phone">
+                                8 (976) 543-21-00
+                            </i>
+                            <span class="contact__city">
+                                Москва
+                            </span>
+                        </button>
+
+                        <button type="button" class="hamburger js-open-mobile-menu">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="page-header__dropdown header-dropdown">
+                    <div class="header-dropdown__site-container">
+                        <div class="header-dropdown__navigation">
+                            <ul>
+                                <li>
+                                    <button data-link="1" type="button"
+                                        class="header-dropdown__button header-dropdown__button--active js-dropdown-button">
+                                        Легализация
+                                    </button>
+                                </li>
+                                <li>
+                                    <button data-link="2" type="button"
+                                        class="header-dropdown__button js-dropdown-button">
+                                        Бизнес
+                                    </button>
+                                </li>
+                                <li>
+                                    <button data-link="3" type="button"
+                                        class="header-dropdown__button js-dropdown-button">
+                                        Документы
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header-dropdown__list-wrapper">
+                            <ul class="header-dropdown__list" data-list="1">
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Получение РВП
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Гарантированное получение ВНЖ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Получение визы в Казахстан
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Гражданство Киргизии
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Решение миграционных проблем
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header-dropdown__list header-dropdown__list--hidden" data-list="2">
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие ТОО (Товарищество с ограниченной ответственностью)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие расчетного счета в РК на зарубежную компанию
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие компании в Астана Хаб
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие компании в Астана Хаб
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие компании в МФЦА
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Юридический адрес
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Юридическое обслуживание
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Бухгалтерское обслуживание
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Получение БИН
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header-dropdown__list header-dropdown__list--hidden" data-list="3">
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие компании в Астана Хаб
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие компании в Астана Хаб
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Открытие компании в МФЦА
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Юридический адрес
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Юридическое обслуживание
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Бухгалтерское обслуживание
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="header-dropdown__link">
+                                        Получение БИН
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-header__breadcrumbs breadcrumbs">
+                    <div class="breadcrumbs__site-container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link breadcrumbs__link--disabled">
+                                    О компании
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-header__mobile-menu mobile-menu _intro-padding-top">
+                <div class="mobile-menu__inner-wrapper">
+                    <div class="mobile-menu__body">
+                        <div class="mobile-menu__menu-wrapper">
+                            <div class="mobile-menu__swiper swiper js-menu-swiper">
+
+                                <ul class="mobile-menu__swiper-wrapper swiper-wrapper">
+                                    <li class="mobile-menu__swiper-slide swiper-slide">
+                                        <div class="menu menu--vertical menu--smaller">
+                                            <ul class="menu__list">
+                                                <li>
+                                                    <button type="button"
+                                                        class="menu__link menu__link--with-arrow js-menu-next">Услуги</button>
+                                                </li>
+                                                <li>
+                                                    <a href="./page-about.html" class="menu__link">О компании</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./page-cases.html" class="menu__link">Наши кейсы</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./page-partners.html" class="menu__link">Партнерам</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./page-blog.html" class="menu__link">Блог</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./page-contacts.html" class="menu__link">Контакты</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="mobile-menu__swiper-slide swiper-slide">
+                                        <div class="mobile-menu__slide">
+                                            <button type="button" class="mobile-menu__back js-menu-back">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/sprite.svg#arrow-back"></use>
+                                                </svg>
+                                                <span>Услуги</span>
+                                            </button>
+
+                                            <ul class="mobile-menu__dropdowns">
+                                                <li>
+                                                    <div class="mobile-menu__dropdown menu-dropdown">
+                                                        <button type="button"
+                                                            class="menu-dropdown__button js-menu-dropdown-button">
+                                                            <span>Легализация</span>
+                                                            <svg class="icon">
+                                                                <use xlink:href="./images/sprite.svg#drop"></use>
+                                                            </svg>
+                                                        </button>
+
+                                                        <div class="menu-dropdown__list-wrapper">
+                                                            <ul class="menu-dropdown__list">
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Получение РВП
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Гарантированное получение ВНЖ
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Получение визы в Казахстан
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        ПГражданство Киргизии
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Решение миграционных проблем
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mobile-menu__dropdown menu-dropdown">
+                                                        <button type="button"
+                                                            class="menu-dropdown__button js-menu-dropdown-button">
+                                                            <span>Бизнес</span>
+                                                            <svg class="icon">
+                                                                <use xlink:href="./images/sprite.svg#drop"></use>
+                                                            </svg>
+                                                        </button>
+
+                                                        <div class="menu-dropdown__list-wrapper">
+                                                            <ul class="menu-dropdown__list">
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Открытие ТОО (Товарищество с ограниченной
+                                                                        ответственностью)
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Открытие расчетного счета в РК на зарубежную
+                                                                        компанию
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Открытие компании в Астана Хаб
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Открытие компании в МФЦА
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Юридический адрес
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Юридическое обслуживание
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Бухгалтерское обслуживание
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Получение БИН
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mobile-menu__dropdown menu-dropdown">
+                                                        <button type="button"
+                                                            class="menu-dropdown__button js-menu-dropdown-button">
+                                                            <span>Документы </span>
+                                                            <svg class="icon">
+                                                                <use xlink:href="./images/sprite.svg#drop"></use>
+                                                            </svg>
+                                                        </button>
+
+                                                        <div class="menu-dropdown__list-wrapper">
+                                                            <ul class="menu-dropdown__list">
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Дистанционное получение ИИН
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Нотариальное согласие собственника жилья
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Договор аренды жилья
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Получение заграничного паспорта РФ
+                                                                        (ускорено/дистанционно)
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Продление/восстановление внутреннего паспорта РФ
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Договор аренды жилья
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Получение заграничного паспорта РФ
+                                                                        (ускорено/дистанционно)
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="menu-dropdown__link">
+                                                                        Продление/восстановление внутреннего паспорта РФ
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mobile-menu__contacts">
+                            <div class="footer-contacts footer-contacts--smaller">
+                                <div class="footer-contacts__phones">
+                                    <div class="footer-contacts__phone phone phone--smaller">
+                                        <span class="phone__label">Телефон в Москве:</span>
+                                        <a href="tel:+79765432100" class="phone__link">8 (976) 543-21-00</a>
+                                    </div>
+                                    <div class="footer-contacts__phone phone phone--smaller">
+                                        <span class="phone__label">Телефон в Казахстане:</span>
+                                        <a href="tel:+79765432100" class="phone__link">8 (976) 543-21-00</a>
+                                    </div>
+                                </div>
+
+                                <ul class="footer-contacts__list">
+                                    <li>
+                                        <a href="mailto:info@loginov.agency"
+                                            class="footer-contacts__span footer-contacts__link">
+                                            info@loginov.agency
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="footer-contacts__span">
+                                            Россия, г. Москва, ул. Российская 1
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="footer-contacts__span">
+                                            Казахстан, г. Алматы, ул. Баумана, 1
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="footer-contacts__span">
+                                            ПН — ПТ, с 08:00 до 21:00
+                                        </span>
+                                    </li>
+                                </ul>
+
+                                <div class="page-footer__socials">
+                                    <a href="#" class="social social--footer">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/sprite.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+
+                                    <a href="#" class="social social--footer">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <button type="button" class="footer-contacts__button button">
+                                    <span>
+                                        Заказать звонок
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ######## main content ####### -->
+        <main class="page-main">
+            <section class="hero hero--about hero--auto-height">
+                <h1 class="visually-hidden">
+                    Section title
+                </h1>
+
+                <div class="page-header__site-container">
+                    <div class="hero__inner-wrapper">
+                        <div class="hero__body">
+                            <picture>
+                                <source media="(max-width: 992px)" type="image/webp"
+                                    srcset="./images/hero/foto-MM.webp" alt="hero team image" />
+                                <source media="(min-width: 992px)" type="image/webp"
+                                    srcset="./images/hero/foto.webp" alt="hero image" />
+                                <img class="lazy" src="./images/hero/foto.png" alt="hero image">
+                            </picture>
+
+                            <div class="hero__name-slogan">
+                                <svg class="icon">
+                                    <use xlink:href="./images/sprite.svg#text"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+    
+            <secton class="section team-section">
+                <div class="team-section__site-container">
+                    <div class="team-section__body">
+                        <div class="team-section__item">
+                            <div class="team-section__left">
+                                <h2 class="h2">
+                                    Loginov Agency&nbsp;—<br> мост&nbsp;между&nbsp;Россией<br> и Казахстаном
+                                </h2>
+                            </div>
+                            <div class="team-section__right">
+                                <div class="team-section__content">
+                                    <p class="team-section__text">
+                                        Задача организации, в особенности же начало повседневной 
+                                        работы по формированию позиции позволяет выполнять важные 
+                                        задания по разработке дальнейших направлений развития. 
+                                        Повседневная практика показывает, что реализация намеченных 
+                                        плановых заданий обеспечивает широкому кругу (специалистов) 
+                                        участие в формировании модели развития.
+                                    </p>
+                                    <p class="team-section__text">
+                                        Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман 
+                                        семантически отражает хорей. Представленный лексико-семантический 
+                                        анализ является от нас анализа позиций стороны развитие 
+                                        психолингвистическим в своей основе, но графомания возможна.
+                                    </p>
+                                    <p class="team-section__text">
+                                        С другой стороны дальнейшее развитие различных форм деятельности 
+                                        требуют от нас анализа позиций, занимаемых участниками в отношении 
+                                        поставленных задач. Начало повседневной работы по формированию 
+                                        позиции требуют определения и уточнения новых.
+                                    </p>
+
+                                    <div class="team-section__statistics statistics">
+                                        <div class="statistics__item">
+                                            <span class="statistics__count h1">
+                                                20
+                                            </span>
+
+                                            <span class="statistics__text">
+                                                лет успешной<br> работы компании
+                                            </span>
+                                        </div>
+
+                                        <div class="statistics__item">
+                                            <span class="statistics__count statistics__count--plus h1">
+                                                500
+                                            </span>
+
+                                            <span class="statistics__text">
+                                                клиентов обратились к<br>  нашим услугам
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-section__item">
+                            <div class="team-section__left">
+                                <ul class="team-section__team-list">
+                                    <li class="team-section__team-item">
+                                        <div class="team-section__team-image">
+                                            <img src="./images/citation/userpic.png" alt="team foto">
+                                        </div>
+                                    </li>
+                                    <li class="team-section__team-item">
+                                        <div class="team-section__team-image">
+                                            <img src="./images/citation/userpic-2.png" alt="team foto">
+                                        </div>
+                                    </li>
+                                    <li class="team-section__team-item">
+                                        <div class="team-section__team-image">
+                                            <img src="./images/citation/userpic.png" alt="team foto">
+                                        </div>
+                                    </li>
+                                    <li class="team-section__team-item">
+                                        <div class="team-section__team-image">
+                                            <img src="./images/citation/userpic-2.png" alt="team foto">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-section__right">
+                                <div class="team-section__content">
+                                    <div class="team-section__text-wrapper">
+                                        <h4 class="team-section__title">
+                                            Профессиональные юристы
+                                        </h4>
+                                        <p class="team-section__text">
+                                            Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман 
+                                            семантически отражает хорей. Представленный лексико-семантический 
+                                            анализ является от нас анализа позиций стороны развитие 
+                                            психолингвистическим в своей основе, но графомания возможна.
+                                        </p>
+                                        <p class="team-section__text">
+                                            С другой стороны дальнейшее развитие различных форм деятельности 
+                                            требуют от нас анализа позиций, занимаемых участниками в отношении 
+                                            поставленных задач. Начало повседневной работы по формированию 
+                                            позиции требуют определения и уточнения новых.
+                                        </p>
+                                    </div>
+                                    <div class="team-section__text-wrapper">
+                                        <h4 class="team-section__title">
+                                            Профессиональные юристы
+                                        </h4>
+                                        <p class="team-section__text">
+                                            Задача организации, в особенности же начало повседневной 
+                                            работы по формированию позиции позволяет выполнять важные 
+                                            задания по разработке дальнейших направлений развития. 
+                                            Повседневная практика показывает, что реализация намеченных 
+                                            плановых заданий обеспечивает широкому кругу (специалистов) 
+                                            участие в формировании модели развития.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </secton>
+
+            <section class="section citation">
+                <div class="page-header__site-container citation__outter-container">
+                    <div class="hero__inner-wrapper citation__inner-wrapper">
+                        <div class="citation__site-container">
+                            <div class="citation__body">
+                                <div class="citation__outer-author author author--citation">
+                                    <div class="author__userpic">
+                                        <img src="./images/citation/userpic.png" alt="citation's author avatar">
+                                    </div>
+                                    <div class="author__desc">
+                                        <h2 class="h2 title-decorated">
+                                            <p class="title-decorated__dark">
+                                                Иммиграция с нами – это просто и надежно!&nbsp;
+                                            </p>
+                                            <p class="title-decorated__grey">
+                                                Получите высоко&shy;квалифицированную помощь в&nbsp;оформлении
+                                                документов, консультации по&nbsp;легальным вопросам и поддержку на каждом
+                                                этапе вашего пути к новой жизни
+                                            </p>
+                                        </h2>
+
+                                        <div class="citation__inner-author author">
+                                            <div class="author__userpic">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/sprite.svg#quote"></use>
+                                                </svg>
+                                                <img src="./images/citation/userpic.png" alt="citation's author avatar">
+                                            </div>
+
+                                            <div class="author__desc">
+                                                <b class="author__name">
+                                                    Панфилов Илья Олегович
+                                                </b>
+
+                                                <i class="author__role">
+                                                    Генеральный директор Loginov Agency
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section quatro page-footer__feedback _bg-back _color-white">
+                <div class="quatro__site-container">
+                    <div class="quatro__header section__header">
+                        <h2 class="h2">
+                            Помогаем в&nbsp;92%&nbsp;обращений
+                        </h2>
+                    </div>
+
+                    <div class="quatro__body">
+                        <div class="quatro__item">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#quat-1"></use>
+                            </svg>
+
+                            <h3 class="quatro__name h3">
+                                Дистанционно
+                            </h3>
+
+                            <p class="quatro__text">
+                                Жирмунский, однако, настаивал, что синхрония доступна.
+                                Анжамбеман семантически отражает хорей. Представленный
+                                лексико-семантический анализ является психолингвистическим.
+                            </p>
+                        </div>
+                        <div class="quatro__item">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#quat-2"></use>
+                            </svg>
+
+                            <h3 class="quatro__name h3">
+                                Доступные цены
+                            </h3>
+
+                            <p class="quatro__text">
+                                Жирмунский, однако, настаивал, что синхрония доступна.
+                                Анжамбеман семантически отражает хорей. Представленный
+                                лексико-семантический анализ является психолингвистическим.
+                            </p>
+                        </div>
+                        <div class="quatro__item">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#quat-3"></use>
+                            </svg>
+
+                            <h3 class="quatro__name h3">
+                                Все по закону
+                            </h3>
+
+                            <p class="quatro__text">
+                                Жирмунский, однако, настаивал, что синхрония доступна.
+                                Анжамбеман семантически отражает хорей. Представленный
+                                лексико-семантический анализ является психолингвистическим.
+                            </p>
+                        </div>
+                        <div class="quatro__item">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#quat-4"></use>
+                            </svg>
+
+                            <h3 class="quatro__name h3">
+                                Индивидуальный подход
+                            </h3>
+
+                            <p class="quatro__text">
+                                Жирмунский, однако, настаивал, что синхрония доступна.
+                                Анжамбеман семантически отражает хорей. Представленный
+                                лексико-семантический анализ является психолингвистическим.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ###### page footer section with feedback-form####### -->
+        <footer class="page-footer">
+            <div class="page-footer__feedback feedback">
+                <div class="feedback__site-container">
+                    <div class="feedback__body">
+                        <div class="feedback__heading">
+                            <h2 class="h2 title-decorated">
+                                <span class="title-decorated__dark">
+                                    Ответим на все вопросы и проведем&nbsp;
+                                </span>
+                                <span class="title-decorated__grey">
+                                    бесплатную консультацию
+                                </span>
+                            </h2>
+
+                            <div class="feedback__author author">
+                                <div class="author__userpic">
+                                    <img src="./images/feedback/userpic.png" alt="author userpic">
+                                </div>
+
+                                <div class="author__desc">
+                                    <span>
+                                        Оставьте контактные данные и наш<br> специалист перезвонит в ближайшее время
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="" class="feedback__form" data-need-validation="">
+                            <div class="feedback__block-inputs inputs-block">
+                                <div class="inputs-block__row">
+                                    <input type="text" name="feedback-name" autocomplete="off" id="feedback-name"
+                                        class="inputs-block__input input input--white js-text-input"
+                                        placeholder="Ваше имя" required data-parsley-reqtext>
+                                </div>
+                                <div class="inputs-block__row">
+                                    <input type="text" name="feedback-phone" autocomplete="off" id="feedback-phone"
+                                        class="inputs-block__input input input--white js-phone-input"
+                                        placeholder="+7 (___) ___-__-__" required data-parsley-phone>
+                                </div>
+                                <div class="inputs-block__row">
+                                    <button type="submit" class="button inputs-block__button">
+                                        <span>Оставить заявку</span>
+                                    </button>
+                                </div>
+                                <div class="inputs-block__row">
+                                    <div class="agreement">
+                                        <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь с</span>
+                                        <a href="#">политикой конфиденциальности</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer__main _bg-back _color-white">
+                <div class="page-footer__site-container">
+                    <div class="page-footer__grid">
+                        <div class="page-footer__logo">
+                            <a href="" class="logo logo--big">
+                                <svg class="icon">
+                                    <use xlink:href="./images/sprite.svg#logo-white"></use>
+                                </svg>
+                            </a>
+
+                            <div class="page-footer__socials page-footer__socials--mobile">
+                                <a href="#" class="social social--footer">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="social social--footer">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="page-footer__menu">
+                            <div class="menu menu--vertical menu--bigger">
+                                <ul class="menu__list">
+                                    <li>
+                                        <a href="/" class="menu__link">Услуги</a>
+                                    </li>
+                                    <li>
+                                        <a href="./page-about.html" class="menu__link">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a href="./page-cases.html" class="menu__link">Наши кейсы</a>
+                                    </li>
+                                    <li>
+                                        <a href="./page-partners.html" class="menu__link">Партнерам</a>
+                                    </li>
+                                    <li>
+                                        <a href="./page-blog.html" class="menu__link">Блог</a>
+                                    </li>
+                                    <li>
+                                        <a href="./page-contacts.html" class="menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="page-footer__contacts">
+                            <div class="footer-contacts">
+                                <div class="footer-contacts__phones">
+                                    <div class="footer-contacts__phone phone">
+                                        <span class="phone__label">Телефон в Москве:</span>
+                                        <a href="tel:+79765432100" class="phone__link">8 (976) 543-21-00</a>
+                                    </div>
+                                    <div class="footer-contacts__phone phone">
+                                        <span class="phone__label">Телефон в Казахстане:</span>
+                                        <a href="tel:+79765432100" class="phone__link">8 (976) 543-21-00</a>
+                                    </div>
+                                </div>
+
+                                <ul class="footer-contacts__list">
+                                    <li>
+                                        <a href="mailto:info@loginov.agency"
+                                            class="footer-contacts__span footer-contacts__link">
+                                            info@loginov.agency
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="footer-contacts__span">
+                                            Россия, г. Москва, ул. Российская 1
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="footer-contacts__span">
+                                            Казахстан, г. Алматы, ул. Баумана, 1
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="footer-contacts__span">
+                                            ПН — ПТ, с 08:00 до 21:00
+                                        </span>
+                                    </li>
+                                </ul>
+
+                                <button type="button" data-path="modal-call" class="footer-contacts__button button">
+                                    <span>
+                                        Заказать звонок
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="page-footer__basement">
+                            <p class="page-footer__copyright copyright">
+                                © 2000 - 2023 ООО «Loginov Agency»
+                            </p>
+
+                            <a href="#" class="page-footer__policy copyright copyright--link">
+                                Политика конфиденциальности и условия<br> обработки персональных данных
+                            </a>
+
+                            <div class="page-footer__socials page-footer__socials--desktop">
+                                <a href="#" class="social">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="social">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#tg"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <a href="https://aaccent.ru" class="page-footer__developer developer">
+                                <span>Сайт разработан:</span>
+                                <svg class="icon">
+                                    <use xlink:href="./images/sprite.svg#dev"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-footer__decore">
+                    <svg id="footer-svg" viewBox="0 0 524 522" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            #svg-path {
+                                stroke-dasharray: 30;
+                                stroke-dashoffset: 1000;
+                                animation: dash 15s linear infinite;
+                            }
+
+                            @keyframes dash {
+                                to {
+                                    stroke-dasharray: 500;
+                                    stroke-dashoffset: 0;
+                                }
+                            }
+                        </style>
+                        <path id="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M242.109 521H163.967L2 223.556H119.924L205.169 404.976L402.656 1H522C429.65 173.982 338.721 346.963 246.371 521H242.109ZM362.874 433.454V516.781H475.115V433.454H362.874Z"
+                            stroke="#FFFF20" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ####### commons modals ######## -->
+    <div class="modal">
+        <div class="modal__container" data-target="modal-consultation">
+            <div class="modal__content">
+                <button type="button" class="modal__close-btn modal-close">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modal__grid">
+                    <form action="" class="modal__form" data-need-validation="">
+                        <div class="modal__heading">
+                            <h2 class="h2">
+                                Записаться<br> на консультацию
+                            </h2>
+                            <p>
+                                Оставьте контактные данные и наш специалист перезвонит в ближайшее время
+                            </p>
+                        </div>
+
+                        <div class="modal__block-inputs inputs-block">
+                            <div class="inputs-block__row">
+                                <input type="text" name="name" autocomplete="off" id="consultation-name"
+                                    class="inputs-block__input input js-text-input" placeholder="Ваше имя" required
+                                    data-parsley-reqtext>
+                            </div>
+                            <div class="inputs-block__row">
+                                <input type="text" name="phone" autocomplete="off" id="consultation-phone"
+                                    class="inputs-block__input input js-phone-input" placeholder="+7 (___) ___-__-__"
+                                    required data-parsley-phone>
+                            </div>
+                            <div class="inputs-block__row">
+                                <button type="submit" class="button inputs-block__button">
+                                    <span>Оставить заявку</span>
+                                </button>
+                            </div>
+                            <div class="inputs-block__row">
+                                <div class="agreement">
+                                    <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь с&nbsp;</span>
+                                    <a href="#">политикой конфиденциальности</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="modal__image-wrapper modal__image-wrapper--consultation">
+                        <div class="modal__image">
+                            <picture>
+                                <source type="image/webp" srcset="./images/modals/consultation.png"
+                                    alt="modal consultation image" />
+                                <img class="lazy" src="./images/modals/consultation.png" alt="modal consultation image">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__container" data-target="modal-call">
+            <div class="modal__content">
+                <button type="button" class="modal__close-btn modal-close">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modal__grid">
+                    <form action="" class="modal__form" data-need-validation="">
+                        <div class="modal__heading">
+                            <h2 class="h2">
+                                Заказать звонок
+                            </h2>
+                            <p>
+                                Оставьте контактные данные и наш специалист перезвонит в ближайшее время
+                            </p>
+                        </div>
+
+                        <div class="modal__block-inputs inputs-block">
+                            <div class="inputs-block__row">
+                                <input type="text" name="name" autocomplete="off" id="callback-name"
+                                    class="inputs-block__input input js-text-input" placeholder="Ваше имя" required
+                                    data-parsley-reqtext>
+                            </div>
+                            <div class="inputs-block__row">
+                                <input type="text" name="phone" autocomplete="off" id="callback-phone"
+                                    class="inputs-block__input input js-phone-input" placeholder="+7 (___) ___-__-__"
+                                    required data-parsley-phone>
+                            </div>
+                            <div class="inputs-block__row">
+                                <button type="submit" class="button inputs-block__button">
+                                    <span>Оставить заявку</span>
+                                </button>
+                            </div>
+                            <div class="inputs-block__row">
+                                <div class="agreement">
+                                    <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь с&nbsp;</span>
+                                    <a href="#">политикой конфиденциальности</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="modal__image-wrapper">
+                        <div class="modal__image">
+                            <picture>
+                                <source type="image/webp" srcset="./images/modals/iphone.png" alt="modal phone image" />
+                                <img class="lazy" src="./images/modals/iphone.png" alt="modal phone image">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--success">
+        <div class="modal__container" data-target="modal-success">
+            <div class="modal__content">
+                <button type="button" class="modal__close-btn modal-close">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modal__success">
+                    <span class="modal__tick">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#tick-stat"></use>
+                        </svg>
+                    </span>
+
+                    <div class="modal__heading">
+                        <h2 class="h2">
+                            Спасибо!
+                        </h2>
+                        <p>
+                            Ваша заявка успешно отправлена
+                        </p>
+                    </div>
+
+                    <button type="button" class="button modal-close">
+                        <span>Хорошо</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--partners">
+        <div class="modal__container" data-target="modal-partners">
+            <div class="modal__content">
+                <button type="button" class="modal__close-btn modal-close">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modal__partners-wrapper">
+                    <form action="#" class="modal__partners" data-need-validation="">
+                        <div class="modal__heading">
+                            <h2 class="h2">
+                                Cтать партнером
+                            </h2>
+                            <p>
+                                Для того, чтобы начать работать с нашей<br> компанией, оставьте заявку
+                            </p>
+                        </div>
+    
+                        <div class="modal__block-inputs inputs-block">
+                            <div class="inputs-block__row">
+                                <input type="text" name="partner-name" autocomplete="off" id="partner-name-id"
+                                    class="inputs-block__input input js-text-input"
+                                    placeholder="Ваше имя" required data-parsley-reqtext>
+                            </div>
+                            <div class="inputs-block__row">
+                                <input type="text" name="partner-phone" autocomplete="off" id="partner-phone-id"
+                                    class="inputs-block__input input js-phone-input"
+                                    placeholder="+7 (___) ___-__-__" required data-parsley-phone>
+                            </div>
+    
+                            <div class="inputs-block__row">
+                                <textarea 
+                                    class="inputs-block__textarea input input--textarea" 
+                                    name="partner-comment" 
+                                    id="partner-comment-id"
+                                > </textarea>
+                            </div>
+    
+                            <div class="inputs-block__row">
+                                <label class="file">
+                                    <input type="file" class="visually-hidden" required>
+                                    <span>
+                                        <i>Прикрепить файл</i>
+                                        <svg class="icon">
+                                            <use xlink:href="./images/sprite.svg#plus"></use>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="inputs-block__row">
+                                <button type="submit" class="button inputs-block__button">
+                                    <span>Оставить заявку</span>
+                                </button>
+                            </div>
+                            <div class="inputs-block__row">
+                                <div class="agreement">
+                                    <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь с&nbsp;</span>
+                                    <a href="#">политикой конфиденциальности</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--number">
+        <div class="modal__container" data-target="modal-number">
+            <div class="modal__content">
+                <button type="button" class="modal__close-btn modal-close">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modal__checkboxes">
+                    <div class="radio">
+                        <input class="visually-hidden" type="radio" name="cities-number" id="cities-number-1" value=""
+                            checked>
+                        <label for="cities-number-1">
+                            <b class="radio__title">Москва</b>
+                            <i class="radio__number">8 (976) 543-21-00</i>
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="visually-hidden" type="radio" name="cities-number" id="cities-number-2" value="">
+                        <label for="cities-number-2">
+                            <b class="radio__title">Казахстан</b>
+                            <i class="radio__number">8 (976) 543-21-00</i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--number">
+        <div class="modal__container" data-target="modal-sections">
+            <div class="modal__content">
+                <button type="button" class="modal__close-btn modal-close">
+                    <svg class="icon">
+                        <use xlink:href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modal__checkboxes">
+                    <div class="radio radio--button">
+                        <input class="visually-hidden" type="radio" name="sections-value" id="sections-value-1" value=""
+                            checked>
+                        <label for="sections-value-1">
+                            <b class="radio__title">Новости</b>
+                        </label>
+                    </div>
+
+                    <div class="radio radio--button">
+                        <input class="visually-hidden" type="radio" name="sections-value" id="sections-value-2"
+                            value="">
+                        <label for="sections-value-2">
+                            <b class="radio__title">Статьи</b>
+                        </label>
+                    </div>
+
+                    <div class="radio radio--button">
+                        <input class="visually-hidden" type="radio" name="sections-value" id="sections-value-3"
+                            value="">
+                        <label for="sections-value-3">
+                            <b class="radio__title">Команда</b>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js" type="module" defer></script>
+</body>
+
+</html>

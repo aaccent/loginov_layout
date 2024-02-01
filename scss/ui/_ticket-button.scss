@@ -1,0 +1,39 @@
+.ticket-button {
+    span  {
+        position: relative;
+        z-index: 2;
+        color: var(--white, #FFF);
+        @include font(1.8rem, 1.3888, 600);
+
+        
+        @include breakpoint(portrait-tablet) {
+            @include font(1.6rem, 1.25, 600);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 42%;
+        height: 89%;    
+        background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22139%22%20height%3D%22192%22%20viewBox%3D%220%200%20139%20192%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M130.185%2072.5275H122.055L105.342%2031.0225H117.494L126.332%2056.3788L146.869%200H159.163C149.645%2024.1947%20140.156%2048.3611%20130.61%2072.5275H130.185ZM142.705%2060.2601V71.8758H154.319V60.2601H142.705Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M131.033%2072.5273H139.163L155.876%20114.032H143.724L134.886%2088.676L114.349%20145.055H102.055C111.573%20120.86%20121.062%2096.6937%20130.608%2072.5273H131.033ZM118.513%2084.7947V73.179H106.899V84.7947H118.513Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M126.726%20198.233H118.596L101.883%20156.728H114.035L122.873%20182.084L143.41%20125.705H155.704C146.186%20149.9%20136.697%20174.066%20127.151%20198.233H126.726ZM139.275%20185.965V197.581H150.889V185.965H139.275Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M77.9191%20157.351H69.7892L53.0762%20115.846H65.2285L74.0666%20141.202L94.6038%2084.8232H106.898C97.3798%20109.018%2087.8902%20133.184%2078.344%20157.351H77.9191ZM90.4396%20145.083V156.699H102.054V145.083H90.4396Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M78.7697%20157.351H86.8996L103.613%20198.856H91.4603L82.6222%20173.499L62.085%20229.878H49.791C59.3089%20205.683%2068.7985%20181.517%2078.3448%20157.351H78.7697ZM66.2491%20169.59V157.974H54.635V169.59H66.2491Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M25.6554%20242.174H17.5255L0.8125%20200.669H12.9648L21.8029%20226.025L42.3401%20169.646H54.6341C45.1161%20193.841%2035.6265%20218.008%2026.0803%20242.174H25.6554ZM38.176%20229.907V241.522H49.7901V229.907H38.176Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.1;
+        content: "";
+    }
+
+    &.partner--flex {
+        position: relative;
+        background-color: var(--blue, #00A9C1);
+        border: none;
+        transition:background-color  var(--transition);
+
+        &:hover {
+            background-color: var(--blue-hover, #0097ac);
+        }
+    }
+}

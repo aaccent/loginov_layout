@@ -83,7 +83,12 @@
     padding-bottom: 2rem;
 
     &__text-window {
-        padding: 3.5rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-grow: 1;
+        padding: 3.5rem 6rem 3.5rem 4rem;
         background-color: var(--back-3, #f5f6f9);
         border-radius: 3rem;
 
@@ -146,6 +151,10 @@
             margin-top: 2rem;
             padding-left: 2rem;
         }
+
+        @include breakpoint(portrait-tablet) {
+            padding-left: unset;
+        }
     }
 }
 
@@ -188,6 +197,11 @@
             height: 6rem;
             fill-opacity: 0.1;
             transition: var(--transition);
+
+            @include breakpoint(portrait-tablet) {
+                width: 5rem;
+                height: 5rem;
+            }
         }
 
         @include breakpoint(laptop) {

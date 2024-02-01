@@ -7,23 +7,30 @@ gsap.registerPlugin(ScrollTrigger);
 export default () => {
     const firstSwiperBox = document.getElementById("js-partnership-swiper-one");
     const secondSwiperBox = document.getElementById("js-partnership-swiper-two");
+    const mediaQuery = window.matchMedia('(min-width: 1199px)');
 
     if (firstSwiperBox) {
         var firstSwiper = new Swiper('.js-partnership-swiper-one', {
-            direction: 'vertical',
-            spaceBetween: 20,
+            spaceBetween: 10,
             slidesPerView: 'auto',
+            allowTouchMove: false,
             speed: 800,
             loop: true,
             init: false,
-            preventInteractionOnTransition: true,
-            freeMode: true,
+
+            breakpoints: {
+                992: {
+                    direction: 'vertical',
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                    freeMode: true,
+                    preventInteractionOnTransition: true,
+                }
+            }
         });
-    
     
         firstSwiper.init();
     }
-
 
     if (secondSwiperBox) {
         var secondSwiper = new Swiper(".js-partnership-swiper-two", {
@@ -40,23 +47,19 @@ export default () => {
         secondSwiper.init();
     }
 
-    let s = ScrollTrigger.create({
-        trigger: "#js-partnership-trigger",
-        end: "max",
-        onUpdate: function(self) {
-            if((self.direction > 0)) {
-                firstSwiper.slideNext(800);
-                secondSwiper.slidePrev(800);
-            } else if ((self.direction < 0)) {
-                firstSwiper.slidePrev(800);
-                secondSwiper.slideNext(800);
-            }
-        },
-    });
-
-
-    if (ScrollTrigger.isScrolling()) {
-        console.log('scrolling');
+    if(mediaQuery) {
+        let s = ScrollTrigger.create({
+            trigger: "#js-partnership-trigger",
+            end: "max",
+            onUpdate: function(self) {
+                if((self.direction > 0)) {
+                    firstSwiper.slideNext(800);
+                    secondSwiper.slidePrev(800);
+                } else if ((self.direction < 0)) {
+                    firstSwiper.slidePrev(800);
+                    secondSwiper.slideNext(800);
+                }
+            },
+        });
     }
-
 };

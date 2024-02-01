@@ -30,4 +30,14 @@
     &--white {
         background: var(--white, #FFF);
     }
+
+    &--textarea {
+        resize: none;
+        height: 14rem;
+        text-align: left;
+
+        @include breakpoint(portrait-tablet) {
+            height: 12rem;
+        }
+    }
 }

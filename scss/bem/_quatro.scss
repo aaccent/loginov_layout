@@ -108,6 +108,7 @@
 
         @include breakpoint(laptop) {
             padding-right: 1rem;
+            line-height: 1.4285;
         }
     }
 }

@@ -53,7 +53,7 @@
         grid-template-areas: 
             "logo menu contacts"
             "basement menu contacts";
-        grid-template-columns: 50% 1fr 1fr;
+        grid-template-columns: 50% 0.9fr 1.1fr;
         grid-template-rows: repeat(auto-fill, 14rem);
 
         @include breakpoint(desktop) {
@@ -102,6 +102,10 @@
     &__menu {
         grid-area: menu;
         padding-left: 1rem;
+
+        @include breakpoint(portrait-tablet) {
+            padding-left: unset;
+        }
     }
 
     &__contacts {
@@ -170,7 +174,7 @@
         }
 
         @include breakpoint(portrait-tablet) {
-            padding: 8rem 0;
+            padding: 7.8rem 0;
         }
     }
 
@@ -190,7 +194,7 @@
 }
 
 .footer-contacts { 
-    padding: 3.5rem 4rem;
+    padding: 3.5rem 4rem 4rem;
     border-radius: 1.5rem;
     background: rgba(3, 58, 67, 0.50);
     backdrop-filter: blur(4.5px);
@@ -240,8 +244,12 @@
     }
 
     &__button {
-        width: 100%;
         margin-top: 4rem;
+        
+        &.button {
+            width: 100%;
+            max-width: 31rem;
+        }
 
         @include breakpoint(portrait-tablet) {
             margin-top: 2.5rem;
@@ -376,6 +384,8 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: space-between;
+        margin-bottom: 0.5rem;
+
 
         @include breakpoint(desktop) {
             flex: 0 1 50%;
@@ -386,7 +396,7 @@
         }
 
         @include breakpoint(portrait-tablet) {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .h2 {
@@ -405,6 +415,7 @@
 
     &__form {
         flex: 1 1 auto;
+        padding-top: 0.5rem;
         padding-left: 10.2rem;
 
         border-style: solid;
@@ -420,9 +431,21 @@
         }
 
         @include breakpoint(portrait-tablet) {
-            padding-top: 2rem;
+            padding-top: 1rem;
             padding-left: unset;
             border-width: 1px 0 0 0;
+        }
+    }
+
+    &__author {
+        .author__desc {
+            span {
+                @include breakpoint(small-tablet) {
+                    br {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

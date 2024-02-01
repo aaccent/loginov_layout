@@ -52,5 +52,19 @@
         @include breakpoint(tablet) {
             margin-bottom: 0.5rem;
         }
+
+        &.h1 {
+            @include breakpoint(laptop) {
+                @include font(4.2rem, 0.9523, 600, 0.5rem);
+            }
+        }
+    }
+
+    &__text {
+        @include breakpoint(laptop) {
+            br {
+                display: none;
+            }
+        }
     }
 }

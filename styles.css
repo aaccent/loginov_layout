@@ -4,7 +4,8 @@
     /* layout: */
     --max-container-width: 140rem;
     --max-header-container-width: 184rem;
-    --content-padding: 1rem;
+    --content-padding: 1.5rem;
+    --content-header-padding: 1.5rem;
 
     /* colors: */
     --blue: #00a9c1;
@@ -43,11 +44,13 @@
 @media only screen and (min-width: 1024px) {
     :root {
         --content-padding: 2rem;
+        --content-header-padding: 1.5rem;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     :root {
         --content-padding: 4rem;
+        --content-header-padding: 4rem;
     }
 }

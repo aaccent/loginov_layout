@@ -16,6 +16,11 @@ import openMobileMenu from './modules/openMobileMenu.js';
 import heroMainSwiper from './modules/heroMainSwiper.js';
 import reviewsSwiperControl from './modules/reviewsSwiperControl.js';
 import partnershipSwiperAnimation from './modules/partnershipSwiperAnimation.js';
+import pressCenterSwiper from './modules/pressCenterSwiper.js';
+import seoTextExpand from './modules/seoTextExpand.js';
+import inputFileTextSet from './modules/inputFileTextSet.js';
+import tipsAnmation from './modules/tipsAnmation.js';
+import selectContol from './modules/selectContol.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -72,4 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
     heroMainSwiper();
     reviewsSwiperControl();
     partnershipSwiperAnimation();
+    pressCenterSwiper();
+    seoTextExpand();
+    inputFileTextSet();
+    tipsAnmation();
+    selectContol();
 })

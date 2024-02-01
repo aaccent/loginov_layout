@@ -43,6 +43,13 @@
         @include breakpoint(mobile) {
             align-items: stretch;
         }
+
+        
+        .button--link {
+            @include breakpoint(mobile) {
+                max-width: 100%;
+            }
+        }
     }
 
     &__heading {
@@ -80,6 +87,18 @@
             @include breakpoint(mobile) {
                 max-width: 80%;
                 text-align: left;
+            }
+        }
+
+        &--smaller {
+            max-width: 50.2rem;
+
+            @include breakpoint(laptop) {
+                max-width: 35rem;
+            }
+
+            @include breakpoint(mobile) {
+                max-width: 100%;
             }
         }
     }

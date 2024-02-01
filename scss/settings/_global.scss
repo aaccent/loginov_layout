@@ -37,6 +37,14 @@ body {
     @include h3;
 }
 
+.h4 {
+    @include h4;
+}
+
+.h5 {
+    @include h5;
+}
+
 @include color('white', var(--white, #fff));
 @include color('text', var(--text, #333));
 @include color('back', var(--back, #03262c));

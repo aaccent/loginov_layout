@@ -1,0 +1,36 @@
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 32.5rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    background: var(--back-3, #f5f6f9);
+
+    @include breakpoint(portrait-tablet) {
+        padding: 2rem;
+        border-radius: 1rem;
+        max-width: 100%;
+    }
+
+    h4 {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    > span {
+        display: block;
+        margin-bottom: 3rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .button--link {
+        max-width: 100%;
+    }
+}

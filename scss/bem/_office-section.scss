@@ -1,0 +1,50 @@
+.office-section {
+    background-color: var(--back-3, #f5f6f9);
+
+    &__body {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+
+        @include breakpoint(portrait-tablet) {
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr;
+            gap: 3rem;
+        }
+    }
+
+    &__left {
+        padding-right: 8.5rem;
+
+        @include breakpoint(desktop) {
+            padding-right: 3rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            padding-right: unset;
+        }
+    }
+
+    &__right {
+        position: relative;
+        overflow: hidden;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+
+            width: 100%;
+            transform: translate(-50%,-50%);
+
+            @include breakpoint(mobile) {
+                width: 150%;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            margin: 0 -1.5rem;
+            padding: 0 1.5rem;
+        }
+    }
+}

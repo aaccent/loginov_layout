@@ -9,6 +9,9 @@
         display: flex;
         align-items: center;
         column-gap: 2.8rem;
+        overflow: auto;
+
+        @include noScrollbar();
 
         @include breakpoint(desktop) {
             padding-left: 1rem;
@@ -16,6 +19,8 @@
 
         @include breakpoint(portrait-tablet) {
             column-gap: 2rem;
+            margin-right: -1.5rem;
+            padding-right: 1.5rem;
         }
   
         @include breakpoint(small-mobile) {
@@ -50,16 +55,24 @@
             }
         }
 
-        &:last-child::before {
-            content: none;
+        &:last-child {
+            &::before {
+                content: none;
+            }
+
+            .breadcrumbs__link {
+                color: var(--black, #231F20);
+                pointer-events: none;
+            }
         }
     }
 
     &__link {
         color: var(--grey, #7e8397);
+        white-space: nowrap;
 
-        &--disabled {
-            color: var(--black, #231F20);
-        }
+        // &--disabled {
+        //     color: var(--black, #231F20);
+        // }
     }
 }

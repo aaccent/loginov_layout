@@ -63,6 +63,18 @@
             margin-top: 3rem;
         }
     }
+
+    &--article {
+        margin-top: 4.5rem;
+
+        @include breakpoint(laptop) {
+            margin-top: 3rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            margin-top: 2.5rem;
+        }
+    }
 }
 
 ._intro-padding-top {

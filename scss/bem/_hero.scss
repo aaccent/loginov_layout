@@ -259,6 +259,78 @@
         width: calc(100% - 2.4rem);
         transform: translate(-50%, 50%);
     }
+
+    &--empty {
+        .hero__inner-wrapper {
+            background-color: transparent;
+            border-radius: unset;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        .hero__secondary-heading {
+            padding: 15rem 0 0rem;
+
+            @include breakpoint(tablet) {
+                padding: 15rem 0 0rem;
+            }
+    
+            @include breakpoint(portrait-tablet) {
+                padding: 7rem 0 0rem;
+            }
+
+            .h2 {
+                max-width: 102rem;
+
+                @include breakpoint(laptop) {
+                    max-width: 60rem;
+                }
+            }
+        }
+    } 
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        
+        width: 100%;
+        margin-top: 3.5rem;
+        padding-bottom: 2.5rem;
+
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: rgba(223, 224, 228, 0.80);
+
+        @include breakpoint(tablet) {
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__footer-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+
+        @include breakpoint(tablet) {
+            gap: 0.5rem;
+        }
+    }
+
+    &--aspect {
+        height: unset;
+    
+        @include breakpoint(tablet) {
+            height: auto;
+            min-height: unset;
+        }
+    }
 }
 
 .hero-slide {

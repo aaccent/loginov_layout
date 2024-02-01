@@ -47,7 +47,7 @@ export default () => {
         secondSwiper.init();
     }
 
-    if(mediaQuery) {
+    if(mediaQuery && document.getElementById('js-partnership-trigger')) {
         let s = ScrollTrigger.create({
             trigger: "#js-partnership-trigger",
             end: "max",

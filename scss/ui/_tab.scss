@@ -1,0 +1,13 @@
+.tab {
+    height: 5rem;
+    padding: 1.4rem 2rem 1.6rem;
+    color: var(-grey, #7e8397);
+    font: inherit;
+    background-color: var(--back-2, #f3f4f8);
+    border-radius: 1rem;
+
+    @include breakpoint(portrait-tablet) {
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+    }
+}

@@ -37,6 +37,22 @@
     }
 }
 
+@mixin h4 {
+    @include font(2.2rem, 1.136, 600);
+
+    @include breakpoint(laptop) {
+        @include font(1.6rem, 1.25, 600);
+    }
+}
+
+@mixin h5 {
+    @include font(1.8rem, 1.111, 600);
+
+    @include breakpoint(laptop) {
+        @include font(1.4rem, 1.4285, 600);
+    }
+}
+
 @mixin text {
     @include font;
 }

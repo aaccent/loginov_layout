@@ -1,0 +1,141 @@
+.final-price {
+    padding: 7.5rem 8rem;
+    background-color: rgba(3, 58, 67, 0.50);
+    border-radius: 3rem;
+    backdrop-filter: blur(4.5px);
+
+    @include breakpoint(desktop) {
+        padding: 3.5rem 4rem;
+    }
+
+    @include breakpoint(portrait-tablet) {
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        column-gap: 6rem;
+
+        &:first-child {
+            margin-bottom: 5rem;
+            padding-bottom: 5rem;
+            border-color: rgba(255, 255, 255, 0.15);
+            border-width: 0 0 1px 0;
+            border-style: solid;
+
+        }
+
+        @include breakpoint(laptop) {
+            column-gap: 3rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            flex-direction: column;
+            
+            
+            &:first-child {
+                margin-bottom: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        @include breakpoint(small-mobile) {
+            align-items: stretch;
+        }
+    }
+
+    &__col {
+        &--left {
+            flex: 0 1 31.4rem;
+
+            @include breakpoint(tablet) {
+                flex: 0 1 40%;
+            }
+
+            @include breakpoint(portrait-tablet) {
+                flex: 1 1 auto;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &--right {
+            flex: 1 1 auto;
+        }
+
+        .button--link {
+            @include breakpoint(small-mobile) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__heading {
+        h2 {
+            margin-bottom: 1rem;
+
+            @include breakpoint(portrait-tablet) {
+                text-align: center;
+            }
+
+            @include breakpoint(small-mobile) {
+                text-align: left;
+            }
+        }
+
+        p {
+            @include font(1.4rem, 1.4285, 600);
+            opacity: 0.55;
+
+            @include breakpoint(portrait-tablet) {
+                text-align: center;
+            }
+
+            @include breakpoint(small-mobile) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3rem 1rem;
+
+        @include breakpoint(tablet) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 2rem;
+        }
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+        
+        @include breakpoint(portrait-tablet) {
+            column-gap: 1rem;
+        }
+
+        .icon {
+            width: 1.9rem;
+            height: 2.5rem;
+
+            @include breakpoint(portrait-tablet) {
+                width: 1.2rem;
+                height: 1.5rem;
+            }
+        }
+
+        > span {
+            @include font(1.8rem, 1.111, 600);
+
+            @include breakpoint(portrait-tablet) {
+                @include font(1.4rem, 1.4285, 600);
+            }
+        }
+    }
+}

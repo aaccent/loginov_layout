@@ -5,7 +5,7 @@ import {validation} from './modules/validation.js';
 import masks from './modules/masks.js';
 // import lazyload from './modules/lazyload.js';
 
-// import fancybox from './modules/fancybox.js';
+import fancybox from './modules/fancybox.js';
 
 import setHeaderPadding from './modules/setHeaderPadding.js';
 import dropdownOpenOnClick from './modules/dropdownOpenOnClick.js';
@@ -21,6 +21,7 @@ import seoTextExpand from './modules/seoTextExpand.js';
 import inputFileTextSet from './modules/inputFileTextSet.js';
 import tipsAnmation from './modules/tipsAnmation.js';
 import selectContol from './modules/selectContol.js';
+import gallerySwiperControl from './modules/gallerySwiperControl.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // lazyload();
 
     // fancybox images modals:
-    // fancybox();
+    fancybox();
 
     // other scripts:
     setHeaderPadding();
@@ -82,4 +83,5 @@ document.addEventListener("DOMContentLoaded", () => {
     inputFileTextSet();
     tipsAnmation();
     selectContol();
+    gallerySwiperControl();
 })

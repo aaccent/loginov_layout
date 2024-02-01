@@ -22,6 +22,10 @@
 // LIBS:
 @import '../js/libs/swiper/swiper.scss';
 @import '../js/libs/swiper/modules/effect-fade.scss';
+@import '../js/libs/swiper/swiper-vars.scss';
+@import '../js/libs/swiper/modules/pagination.scss';
+// fancybox =>
+@import '../js/libs/fancybox/fancybox/fancybox.css';
 
 //UI:
 @import 'ui/button';
@@ -38,6 +42,7 @@
 @import 'ui/select';
 @import 'ui/file';
 @import 'ui/ticket-button';
+@import 'ui/tab';
 
 //BEM:
 @import 'bem/logo';
@@ -71,4 +76,12 @@
 @import 'bem/press-section';
 @import 'bem/cases-section';
 @import 'bem/team-section';
+@import 'bem/office-section';
+@import 'bem/gallery';
+@import 'bem/documents';
+@import 'bem/tooltip';
+@import 'bem/faq';
+@import 'bem/final-price';
+@import 'bem/review-article';
+@import 'bem/services-list';
 

@@ -1,0 +1,104 @@
+.services-list {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem; 
+
+        @include breakpoint(laptop) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(mobile) {
+            grid-template-columns: 100%;
+            gap: 1rem;
+        }
+    }
+}
+
+.service-link {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    min-height: 27rem;
+    padding: 2rem 2.5rem 2.5rem; 
+    border-radius: 1.5rem;
+    background: var(--back-3, #f5f6f9);
+
+    @include breakpoint(portrait-tablet) {
+        min-height: 18.5rem;
+    }
+
+    &__price {
+        display: flex;
+
+        &::before {
+            content: "От\00A0";
+        }
+
+        &::after {
+            content: "\00A0₽";
+        }
+    }
+
+    &__header {
+        width: 100%;
+        @include font(1.8rem, 1.3888, 500, 1rem);
+
+        @include breakpoint(portrait-tablet) {
+            @include font(1.6rem, 1.5625, 500, 1rem);
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price {
+        display: block;
+        height: 5rem;
+        padding: 1.5rem 2rem;
+        color: var(--grey, #7e8397);
+        background: var(--white, #FFF);
+        border-radius: 0.8rem;
+
+        @include breakpoint(portrait-tablet) {
+            height: 4rem;
+            padding: 1rem 1.5rem;
+        }
+    }
+    
+    &__icon {
+        .icon {
+            width: 5rem;
+            height: 5rem;
+            fill: var(--blue, #00a9c1);
+            transition: var(--transition);
+
+            @include breakpoint(portrait-tablet) {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    &:hover {
+        .service-link__icon {
+            .icon {
+                fill: var(--blue-hover, #0097ac);
+            }
+        }
+    }
+}

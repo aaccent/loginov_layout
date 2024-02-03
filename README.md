@@ -93,7 +93,7 @@
 
 </details>
 
-# Ссылкы на верстку:
+# Ссылки на верстку:
 ## Страница - [Главная](https://aaccent.github.io/loginov_layout/).
 ## Страница - [О компании](https://aaccent.github.io/loginov_layout/page-about.html).
 ## Страница - [Наши кейсы](https://aaccent.github.io/loginov_layout/page-cases.html).

@@ -1,0 +1,105 @@
+.hero-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        justify-content: unset;
+        align-items: stretch;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint(mobile) {
+            display: inline-block;
+        }
+
+        span {
+            @include breakpointMF(laptop) {
+                transition-property: transform, opacity;
+                transition-duration: 0.4s;
+                transition-timing-function: ease-in;
+            }
+        }
+        span:nth-child(1) {
+            @include breakpointMF(laptop) {
+                transition-delay: 0.2s;
+            }
+        }
+        span:nth-child(2) {
+            @include breakpointMF(laptop) {
+                transition-delay: 0.6s;
+            }
+        }
+        span:nth-child(3) {
+            @include breakpointMF(laptop) {
+                transition-delay: 1s;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 71.6rem;
+        @include font(1.8rem, 1.388, 400);
+        @include maxSizeText(6);
+
+        @include breakpoint(portrait-tablet) {
+            @include font(1.4rem, 1.4285, 400);
+        }
+
+        @include breakpointMF(laptop) {
+            transition-property: transform, opacity;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in;
+            transition-delay: 1.3s;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 4rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__buttons,
+    &__swiper-controls {
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
+    }
+
+    &__buttons {
+        @include breakpointMF(laptop) {
+            transition-property: opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+        }
+    }
+
+    &__swiper-controls {
+        column-gap: 1rem;
+
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden;
+        }
+    }
+
+    &__link {
+        &.button--link {
+            @include breakpoint(small-tablet) {
+                width: 100%;
+                max-width: unset;
+            }
+        }
+    }
+}

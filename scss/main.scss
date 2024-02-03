@@ -52,12 +52,16 @@
 @import 'bem/breadcrumbs';
 @import 'bem/mobile-menu';
 @import 'bem/menu-dropdown';
+@import 'bem/header-dropdown';
 @import 'bem/inputs-block';
 @import 'bem/author';
 @import 'bem/copyright';
 @import 'bem/developer';
+@import 'bem/footer-contacts';
 // sections =>
 @import 'bem/hero';
+@import 'bem/hero-slide';
+@import 'bem/image-slide';
 @import 'bem/activities';
 @import 'bem/activity';
 @import 'bem/citation';
@@ -84,4 +88,5 @@
 @import 'bem/final-price';
 @import 'bem/review-article';
 @import 'bem/services-list';
+@import 'bem/map';
 

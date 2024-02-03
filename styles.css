@@ -6,6 +6,7 @@
     --max-header-container-width: 184rem;
     --content-padding: 1.5rem;
     --content-header-padding: 1.5rem;
+    --header-height: 7rem;
 
     /* colors: */
     --blue: #00a9c1;
@@ -38,6 +39,7 @@
 @media only screen and (min-width: 577px) {
     :root {
         --content-padding: 1.5rem;
+        
     }
 }
 
@@ -52,5 +54,11 @@
     :root {
         --content-padding: 4rem;
         --content-header-padding: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    :root {
+        --header-height: 11rem;
     }
 }

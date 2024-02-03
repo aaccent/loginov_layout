@@ -167,4 +167,13 @@
         <rect width="50" height="50" rx="8" />
         <path d="M20 30L30 20M30 20H20M30 20V30" stroke="white" stroke-width="2"/>
     </symbol>
+
+    <symbol id="ya-pin" viewBox="0 0 80 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="#00A9C1"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.1585 55H35.8525L29 38.4118H33.9891L37.5956 48.5294L45.9508 26H51C47.0929 35.6471 43.2459 45.2941 39.3388 55H39.1585ZM44.2678 50.1177V54.7647H49.0164V50.1177H44.2678Z" fill="white"/>
+        <circle cx="40" cy="90" r="5" fill="#00A9C1"/>
+        <circle cx="40" cy="90" r="2" fill="white"/>
+    </symbol>
+
+
 </svg>

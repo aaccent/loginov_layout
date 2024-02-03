@@ -8,11 +8,13 @@ import masks from './modules/masks.js';
 import fancybox from './modules/fancybox.js';
 
 import setHeaderPadding from './modules/setHeaderPadding.js';
-import dropdownOpenOnClick from './modules/dropdownOpenOnClick.js';
+import setFixedHeader from './modules/setFixedHeader.js';
+import dropdownOpenOnClick from './modules/dropdownOpenOnHover.js';
 import dropdownListControl from './modules/dropdownListControl.js';
 import menuDropdownsOpens from './modules/menuDropdownsOpens.js';
 import menuSwiperControl from './modules/menuSwiperControl.js';
 import openMobileMenu from './modules/openMobileMenu.js';
+
 import heroMainSwiper from './modules/heroMainSwiper.js';
 import reviewsSwiperControl from './modules/reviewsSwiperControl.js';
 import partnershipSwiperAnimation from './modules/partnershipSwiperAnimation.js';
@@ -22,6 +24,10 @@ import inputFileTextSet from './modules/inputFileTextSet.js';
 import tipsAnmation from './modules/tipsAnmation.js';
 import selectContol from './modules/selectContol.js';
 import gallerySwiperControl from './modules/gallerySwiperControl.js';
+import youtubeVideoControl from './modules/youtubeVideoControl.js';
+import autoCounterAnimatiion from './modules/autoCounterAnimatiion.js';
+import textParallax from './modules/textParallax.js';
+import preventSubmitEvent from './modules/preventSubmitEvent.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -30,6 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         body.classList.remove('preload');
     }, 500);
+
+    setTimeout(() => {
+        body.classList.remove('animate-trigger');
+    }, 1000);
+    
 
     // inits modals:
     const modal = new Modal({
@@ -41,14 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // inits map:
     if(document.getElementById('yamapsId')) {
+        const mediaQuery = window.matchMedia('(max-width: 992px)');
+        let coords,
+            center,
+            data = document.getElementById('yamapsId').dataset.coords;
+
+        data ? (coords = Array.from(data.split(', '))) : (coords = [43.237163, 76.945654]);
+        mediaQuery.matches ? (center = coords) : (center = [43.256456, 76.880005]);
+
         const map = new Map('yamapsId', {
             // map center:
-            center: [55.77, 49.15],
+            center: center,
             // map zoom value:
-            zoom: 14,
+            zoom: 12,
             // placemarks:
             coords: [
-                [55.767398, 49.150961]
+                coords
             ],
             // map control elements:
             controls: [
@@ -56,6 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         })
     }
+
+    setTimeout(() => {
+        partnershipSwiperAnimation();
+    }, 1000)
 
     // masks and validation:
     validation();
@@ -74,14 +97,18 @@ document.addEventListener("DOMContentLoaded", () => {
     menuDropdownsOpens();
     menuSwiperControl();
     openMobileMenu();
+    setFixedHeader();
 
+    textParallax();
+    autoCounterAnimatiion();
     heroMainSwiper();
     reviewsSwiperControl();
-    partnershipSwiperAnimation();
     pressCenterSwiper();
     seoTextExpand();
     inputFileTextSet();
     tipsAnmation();
     selectContol();
     gallerySwiperControl();
+    youtubeVideoControl();
+    preventSubmitEvent();
 })

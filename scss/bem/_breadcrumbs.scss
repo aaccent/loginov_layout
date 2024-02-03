@@ -70,9 +70,25 @@
     &__link {
         color: var(--grey, #7e8397);
         white-space: nowrap;
+    }
+}
 
-        // &--disabled {
-        //     color: var(--black, #231F20);
-        // }
+.wrapper--light-breadcrumbs,
+.body--light-breadcrumbs {
+    .breadcrumbs__link {
+        color: var(--white, #FFF);
+        opacity: 0.55;
+    }
+
+    .breadcrumbs__item {
+        color: var(--white, #FFF);
+
+        &:last-child {
+            .breadcrumbs__link {
+                color: var(--white, #FFF);
+                opacity: 1;
+                pointer-events: none;
+            }
+        }
     }
 }

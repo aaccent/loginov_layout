@@ -37,6 +37,7 @@
     }
 
     &__count {
+        min-width: 2ch;
         color: var(--blue, #00A9C1);
         line-height: 0.806;
 

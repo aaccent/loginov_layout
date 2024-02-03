@@ -9,6 +9,7 @@ export default () => {
     const secondSwiperBox = document.getElementById("js-partnership-swiper-two");
     const mediaQuery = window.matchMedia('(min-width: 1199px)');
 
+
     if (firstSwiperBox) {
         var firstSwiper = new Swiper('.js-partnership-swiper-one', {
             spaceBetween: 10,
@@ -17,6 +18,8 @@ export default () => {
             speed: 800,
             loop: true,
             init: false,
+            observer: true,
+            observeParents:true,
 
             breakpoints: {
                 992: {
@@ -30,34 +33,37 @@ export default () => {
         });
     
         firstSwiper.init();
+        firstSwiper.slideNext();
     }
 
     if (secondSwiperBox) {
         var secondSwiper = new Swiper(".js-partnership-swiper-two", {
-        direction: "vertical",
-        spaceBetween: 20,
-        slidesPerView: "auto",
-        loop: true,
-        speed: 800,
-        init: false,
-        preventInteractionOnTransition: true,
-        freeMode: true,
+            direction: "vertical",
+            spaceBetween: 20,
+            slidesPerView: "auto",
+            loop: true,
+            speed: 800,
+            init: false,
+            preventInteractionOnTransition: true,
+            freeMode: true,
+            observer: true,
+            observeParents:true,
         });
 
         secondSwiper.init();
     }
 
-    if(mediaQuery && document.getElementById('js-partnership-trigger')) {
-        let s = ScrollTrigger.create({
-            trigger: "#js-partnership-trigger",
+    if(document.getElementById('js-partnership-trigger')) {
+        var s = ScrollTrigger.create({
+            start: "top top",
             end: "max",
             onUpdate: function(self) {
                 if((self.direction > 0)) {
-                    firstSwiper.slideNext(800);
-                    secondSwiper.slidePrev(800);
+                    firstSwiper.slideNext(600);
+                    secondSwiper.slidePrev(600);
                 } else if ((self.direction < 0)) {
-                    firstSwiper.slidePrev(800);
-                    secondSwiper.slideNext(800);
+                    firstSwiper.slidePrev(600);
+                    secondSwiper.slideNext(600);
                 }
             },
         });

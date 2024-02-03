@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <!-- <base href="/"> -->
-    <title>О компании</title>
+    <title>Контакты</title>
     <meta name="description" content="Simple Starter 2.0 Description ">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body class="preload animate-trigger">
-    <div class="wrapper">
+<body class="preload body--main-page">
+    <div class="wrapper wrapper--main-page">
         <!-- #### page header section with dropdwon-menu, mobile-menu, breadcrumbs #### -->
         <header class="page-header fix-block">
             <div class="page-header__inner-wrapper">
@@ -543,7 +543,7 @@
 
         <!-- ######## main content ####### -->
         <main class="page-main">
-            <section class="hero hero--about hero--auto-height">
+            <section class="hero hero--about hero--map">
                 <h1 class="visually-hidden">
                     Section title
                 </h1>
@@ -551,19 +551,63 @@
                 <div class="page-header__site-container">
                     <div class="hero__inner-wrapper">
                         <div class="hero__body">
-                            <picture>
-                                <source media="(max-width: 992px)" type="image/webp"
-                                    srcset="./images/hero/foto-MM.webp" alt="hero team image" />
-                                <source media="(min-width: 992px)" type="image/webp"
-                                    srcset="./images/hero/foto.webp" alt="hero image" />
-                                <img class="lazy" src="./images/hero/foto.png" alt="hero image">
-                            </picture>
+                            <div class="hero__map map" id="yamapsId" data-coords="43.237163, 76.945654"></div>
+                            <div class="hero__site-container">
+                                <div class="hero__map-popup">
+                                    <h2 class="h2">
+                                        Контакты
+                                    </h2>
+                                    <div class="footer-contacts footer-contacts--clean">
+                                        <div class="footer-contacts__phones">
+                                            <div class="footer-contacts__phone phone">
+                                                <span class="phone__label">Телефон в Москве:</span>
+                                                <a href="tel:+79765432100" class="phone__link">8 (976) 543-21-00</a>
+                                            </div>
+                                            <div class="footer-contacts__phone phone">
+                                                <span class="phone__label">Телефон в Казахстане:</span>
+                                                <a href="tel:+79765432100" class="phone__link">8 (976) 543-21-00</a>
+                                            </div>
+                                        </div>
 
-                            <div class="hero__name-slogan-wrapper">
-                                <div class="hero__name-slogan">
-                                    <svg class="icon">
-                                        <use xlink:href="./images/sprite.svg#text"></use>
-                                    </svg>
+                                        <ul class="footer-contacts__list">
+                                            <li>
+                                                <a href="mailto:info@loginov.agency"
+                                                    class="footer-contacts__span footer-contacts__link">
+                                                    info@loginov.agency
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="footer-contacts__span">
+                                                    Казахстан, г. Алматы, ул. Баумана, 1
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="footer-contacts__span">
+                                                    ПН — ПТ, с 08:00 до 21:00
+                                                </span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="footer-contacts__socials">
+                                            <a href="#" class="social">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/sprite.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+
+                                            <a href="#" class="social">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/sprite.svg#tg"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <button type="button" data-path="modal-call" class="footer-contacts__button button">
+                                            <span>
+                                                Заказать звонок
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -572,336 +616,6 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
-    
-            <section class="section team-section">
-                <div class="team-section__site-container">
-                    <div class="team-section__body">
-                        <div class="team-section__item">
-                            <div class="team-section__left">
-                                <h2 class="h2">
-                                    Loginov Agency&nbsp;—<br> мост&nbsp;между&nbsp;Россией<br> и Казахстаном
-                                </h2>
-                            </div>
-                            <div class="team-section__right">
-                                <div class="team-section__content">
-                                    <p class="team-section__text">
-                                        Задача организации, в особенности же начало повседневной 
-                                        работы по формированию позиции позволяет выполнять важные 
-                                        задания по разработке дальнейших направлений развития. 
-                                        Повседневная практика показывает, что реализация намеченных 
-                                        плановых заданий обеспечивает широкому кругу (специалистов) 
-                                        участие в формировании модели развития.
-                                    </p>
-                                    <p class="team-section__text">
-                                        Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман 
-                                        семантически отражает хорей. Представленный лексико-семантический 
-                                        анализ является от нас анализа позиций стороны развитие 
-                                        психолингвистическим в своей основе, но графомания возможна.
-                                    </p>
-                                    <p class="team-section__text">
-                                        С другой стороны дальнейшее развитие различных форм деятельности 
-                                        требуют от нас анализа позиций, занимаемых участниками в отношении 
-                                        поставленных задач. Начало повседневной работы по формированию 
-                                        позиции требуют определения и уточнения новых.
-                                    </p>
-
-                                    <div class="team-section__statistics statistics">
-                                        <div class="statistics__item">
-                                            <span class="statistics__count h1">
-                                                20
-                                            </span>
-
-                                            <span class="statistics__text">
-                                                лет успешной<br> работы компании
-                                            </span>
-                                        </div>
-
-                                        <div class="statistics__item">
-                                            <span class="statistics__count statistics__count--plus h1">
-                                                500
-                                            </span>
-
-                                            <span class="statistics__text">
-                                                клиентов обратились к<br>  нашим услугам
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="team-section__item">
-                            <div class="team-section__left">
-                                <ul class="team-section__team-list">
-                                    <li class="team-section__team-item">
-                                        <div class="team-section__team-image">
-                                            <img src="./images/citation/userpic.png" alt="team foto">
-                                        </div>
-                                    </li>
-                                    <li class="team-section__team-item">
-                                        <div class="team-section__team-image">
-                                            <img src="./images/citation/userpic-2.png" alt="team foto">
-                                        </div>
-                                    </li>
-                                    <li class="team-section__team-item">
-                                        <div class="team-section__team-image">
-                                            <img src="./images/citation/userpic.png" alt="team foto">
-                                        </div>
-                                    </li>
-                                    <li class="team-section__team-item">
-                                        <div class="team-section__team-image">
-                                            <img src="./images/citation/userpic-2.png" alt="team foto">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="team-section__right">
-                                <div class="team-section__content">
-                                    <div class="team-section__text-wrapper">
-                                        <h4 class="team-section__title">
-                                            Профессиональные юристы
-                                        </h4>
-                                        <p class="team-section__text">
-                                            Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман 
-                                            семантически отражает хорей. Представленный лексико-семантический 
-                                            анализ является от нас анализа позиций стороны развитие 
-                                            психолингвистическим в своей основе, но графомания возможна.
-                                        </p>
-                                        <p class="team-section__text">
-                                            С другой стороны дальнейшее развитие различных форм деятельности 
-                                            требуют от нас анализа позиций, занимаемых участниками в отношении 
-                                            поставленных задач. Начало повседневной работы по формированию 
-                                            позиции требуют определения и уточнения новых.
-                                        </p>
-                                    </div>
-                                    <div class="team-section__text-wrapper">
-                                        <h4 class="team-section__title">
-                                            Профессиональные юристы
-                                        </h4>
-                                        <p class="team-section__text">
-                                            Задача организации, в особенности же начало повседневной 
-                                            работы по формированию позиции позволяет выполнять важные 
-                                            задания по разработке дальнейших направлений развития. 
-                                            Повседневная практика показывает, что реализация намеченных 
-                                            плановых заданий обеспечивает широкому кругу (специалистов) 
-                                            участие в формировании модели развития.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section office-section">
-                <div class="office-section__site-container">
-                    <div class="office-section__body">
-                        <div class="office-section__left">
-                            <div class="partnership__info ">
-                                <div class="partnership__heading">
-                                    <h2 class="h2">
-                                        Офис&nbsp;находится<br> в&nbsp;Казахстане
-                                    </h2>
-
-                                    <span class="partnership__text partnership__text--smaller">
-                                        Это помогает следить за меняющимся законодательством&nbsp;и 
-                                        принимать спланированные&nbsp;решения по работе с клиентами
-                                    </span>
-                                </div>
-
-                                <a href="/page-contacts.html" type="button" class="button button--link">
-                                    <span>Показать на карте</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="office-section__right">
-                            <svg class="icon">
-                                <use xlink:href="./images/sprite.svg#map"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section gallery">
-                <div class="gallery__site-container">
-                    <div class="gallery__body press-center__body press-center__swiper swiper js-gallery-swiper">
-                        <div class="press-center__navigations">
-                            <h2 class="h2 press-center__title">
-                                Фотогалерея
-                            </h2>
-                            <div class="gallery__control press-center__swiper-control">
-                                <button type="button"
-                                    class="slider-button slider-button--blue gallery__control-prev">
-                                    <svg class="icon">
-                                        <use xlink:href="./images/sprite.svg#arrow-left"></use>
-                                    </svg>
-                                </button>
-                                <button type="button"
-                                    class="slider-button slider-button--blue gallery__control-next">
-                                    <svg class="icon icon--reverse">
-                                        <use xlink:href="./images/sprite.svg#arrow-left"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <ul class="gallery__swiper-wrapper swiper-wrapper">
-                            <li class="gallery__swiper-slide swiper-slide">
-                                <a href="./images/gallery/img.webp" class="gallery__slide" data-fancybox="" id="image-1">
-                                    <picture>
-                                        <source type="image/webp"
-                                            srcset="./images/gallery/img.webp" alt="gallery image"/>
-                                        <img class="lazy" src="./images/gallery/img.jpg" alt="gallery image">
-                                    </picture>
-                                </a>
-                            </li>
-                            <li class="gallery__swiper-slide swiper-slide">
-                                <a href="./images/gallery/img.webp" class="gallery__slide" data-fancybox="" id="image-2">
-                                    <picture>
-                                        <source type="image/webp"
-                                            srcset="./images/gallery/img.webp" alt="gallery image"/>
-                                        <img class="lazy" src="./images/gallery/img.jpg" alt="gallery image">
-                                    </picture>
-                                </a>
-                            </li>
-                            <li class="gallery__swiper-slide swiper-slide">
-                                <a href="./images/gallery/img.webp" class="gallery__slide" data-fancybox="" id="image-3">
-                                    <picture>
-                                        <source type="image/webp"
-                                            srcset="./images/gallery/img.webp" alt="gallery image"/>
-                                        <img class="lazy" src="./images/gallery/img.jpg" alt="gallery image">
-                                    </picture>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section citation">
-                <div class="page-header__site-container citation__outter-container">
-                    <div class="hero__inner-wrapper citation__inner-wrapper">
-                        <div class="citation__site-container">
-                            <div class="citation__body">
-                                <div class="citation__outer-author author author--citation">
-                                    <div class="author__userpic">
-                                        <img src="./images/citation/userpic.png" alt="citation's author avatar">
-                                    </div>
-                                    <div class="author__desc">
-                                        <h2 class="h2 title-decorated">
-                                            <p class="title-decorated__dark">
-                                                Иммиграция с нами – это просто и надежно!&nbsp;
-                                            </p>
-                                            <p class="title-decorated__grey">
-                                                Получите высоко&shy;квалифицированную помощь в&nbsp;оформлении
-                                                документов, консультации по&nbsp;легальным вопросам и поддержку на каждом
-                                                этапе вашего пути к новой жизни
-                                            </p>
-                                        </h2>
-
-                                        <div class="citation__inner-author author">
-                                            <div class="author__userpic">
-                                                <svg class="icon">
-                                                    <use xlink:href="./images/sprite.svg#quote"></use>
-                                                </svg>
-                                                <img src="./images/citation/userpic.png" alt="citation's author avatar">
-                                            </div>
-
-                                            <div class="author__desc">
-                                                <b class="author__name">
-                                                    Панфилов Илья Олегович
-                                                </b>
-
-                                                <i class="author__role">
-                                                    Генеральный директор Loginov Agency
-                                                </i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section quatro page-footer__feedback _bg-back _color-white">
-                <div class="quatro__site-container">
-                    <div class="quatro__header section__header">
-                        <h2 class="h2">
-                            Помогаем в&nbsp;92%&nbsp;обращений
-                        </h2>
-                    </div>
-
-                    <div class="quatro__body">
-                        <div class="quatro__item">
-                            <svg class="icon">
-                                <use xlink:href="./images/sprite.svg#quat-1"></use>
-                            </svg>
-
-                            <h3 class="quatro__name h3">
-                                Дистанционно
-                            </h3>
-
-                            <p class="quatro__text">
-                                Жирмунский, однако, настаивал, что синхрония доступна.
-                                Анжамбеман семантически отражает хорей. Представленный
-                                лексико-семантический анализ является психолингвистическим.
-                            </p>
-                        </div>
-                        <div class="quatro__item">
-                            <svg class="icon">
-                                <use xlink:href="./images/sprite.svg#quat-2"></use>
-                            </svg>
-
-                            <h3 class="quatro__name h3">
-                                Доступные цены
-                            </h3>
-
-                            <p class="quatro__text">
-                                Жирмунский, однако, настаивал, что синхрония доступна.
-                                Анжамбеман семантически отражает хорей. Представленный
-                                лексико-семантический анализ является психолингвистическим.
-                            </p>
-                        </div>
-                        <div class="quatro__item">
-                            <svg class="icon">
-                                <use xlink:href="./images/sprite.svg#quat-3"></use>
-                            </svg>
-
-                            <h3 class="quatro__name h3">
-                                Все по закону
-                            </h3>
-
-                            <p class="quatro__text">
-                                Жирмунский, однако, настаивал, что синхрония доступна.
-                                Анжамбеман семантически отражает хорей. Представленный
-                                лексико-семантический анализ является психолингвистическим.
-                            </p>
-                        </div>
-                        <div class="quatro__item">
-                            <svg class="icon">
-                                <use xlink:href="./images/sprite.svg#quat-4"></use>
-                            </svg>
-
-                            <h3 class="quatro__name h3">
-                                Индивидуальный подход
-                            </h3>
-
-                            <p class="quatro__text">
-                                Жирмунский, однако, настаивал, что синхрония доступна.
-                                Анжамбеман семантически отражает хорей. Представленный
-                                лексико-семантический анализ является психолингвистическим.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </main>
 
         <!-- ###### page footer section with feedback-form####### -->

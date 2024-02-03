@@ -15,14 +15,14 @@
     // .css и min.css файлы в отдельную директорию
     "liveSassCompile.settings.formats": [
         {
-        "format": "compressed",
-        "extensionName": ".min.css",
-        "savePath": "/css/"
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css/"
         },
         {
-        "format": "expanded",
-        "extensionName": ".css",
-        "savePath": "/css/"
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css/"
         }
     ],
 
@@ -38,7 +38,7 @@
 
     "liveSassCompile.settings.includeItems": [
         {
-        "input": "~/scss/main.scss"
+            "input": "~/scss/main.scss"
         }
     ],
 
@@ -90,4 +90,14 @@
 * JavaScript разбит на модули './js/modules', которые подключаются в './js/main.js'
 
 # Ссылкы на верстку:
-## Страница - [Главная]().
+## Страница - [Главная](https://aaccent.github.io/loginov_layout/).
+## Страница - [О компании](https://aaccent.github.io/loginov_layout/page-about.html).
+## Страница - [Наши кейсы](https://aaccent.github.io/loginov_layout/page-cases.html).
+## Страница - [Страница проекта](https://aaccent.github.io/loginov_layout/page-case.html).
+## Страница - [Список услуг](https://aaccent.github.io/loginov_layout/page-services.html).
+## Страница - [Услуга](https://aaccent.github.io/loginov_layout/page-service.html).
+## Страница - [Подуслуга](https://aaccent.github.io/loginov_layout/page-service-item.html).
+## Страница - [Пресс-центр](https://aaccent.github.io/loginov_layout/page-press-center.html).
+## Страница - [Название статьи](https://aaccent.github.io/loginov_layout/page-article.html).
+## Страница - [Партнеры](https://aaccent.github.io/loginov_layout/page-partners.html).
+## Страница - [Контакты](https://aaccent.github.io/loginov_layout/page-contacts.html).

@@ -1,0 +1,24 @@
+[class*="ymaps-2"][class*="-ground-pane"]{
+    filter: grayscale(1) brightness(1);
+}
+
+.ya-placemark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 3rem;
+    height: 3rem;
+    
+    cursor: pointer;
+  
+    .icon {
+      width: 8rem;
+      height: 9.5rem;
+      flex-shrink: 0;
+    }
+  
+    &--red {
+      background-color: var(--accent);
+    }
+  }

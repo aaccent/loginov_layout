@@ -3,15 +3,18 @@ export default () => {
 
     if(!dropDownLink) return;
 
-    dropDownLink.addEventListener('mouseenter', (e) => {
+    dropDownLink.addEventListener('mouseover', (e) => {
         document.body.classList.add('dropdown-is-open');
 
-        
 
         window.addEventListener('click', (e) => {
             if(!e.target.closest('.page-header__dropdown')) {
                 document.body.classList.remove('dropdown-is-open');
             }
+        })
+
+        window.addEventListener('scroll', (e) => {
+            document.body.classList.remove('dropdown-is-open');
         })
     })
 }

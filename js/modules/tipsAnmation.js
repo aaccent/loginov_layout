@@ -11,5 +11,5 @@ export default () => {
         easing: 'easeInOutQuad',
         duration: 1300,
         loop: true
-      });
+    });
 }

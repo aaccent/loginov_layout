@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body class="preload">
-    <div class="wrapper">
+<body class="preload body--light-breadcrumbs">
+    <div class="wrapper wrapper--light-breadcrumbs">
         <!-- #### page header section with dropdwon-menu, mobile-menu, breadcrumbs #### -->
         <header class="page-header fix-block">
             <div class="page-header__inner-wrapper">
@@ -555,8 +555,25 @@
 
                 <div class="page-header__site-container">
                     <div class="hero__inner-wrapper">
-                        <div class="hero__body">
+                        <div class="hero__site-container">
+                            <div class="hero__secondary-heading">
+                                <h2 class="h2">
+                                    Документы
+                                </h2>
 
+                                <span>
+                                    Задача организации, в особенности же начало повседневной 
+                                    работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="hero__aspect-picture">
+                            <picture>
+                                <source media="(max-width: 640px)" type="image/webp" srcset="./images/hero/aspect-MM.webp" alt="hero image"/>
+                                <source media="(min-width: 640px)" type="image/webp" srcset="./images/hero/aspect.webp" alt="hero image"/>
+                                <img class="lazy" src="./images/hero/aspect.jpg" alt="press article image">
+                            </picture>
                         </div>
                     </div>
 

@@ -37,6 +37,12 @@
         @include breakpoint(portrait-tablet) {
             padding: 7.5rem 0 2.5rem;
         }
+
+        &--smaller {
+            @include breakpoint(portrait-tablet) {
+                padding: 5.5rem 0 2.5rem;
+            }
+        }
     }
 
     &__navigations {

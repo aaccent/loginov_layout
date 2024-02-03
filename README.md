@@ -1,5 +1,7 @@
 # Шаблон для верстки HTML/CSS/JS для vs-code
 
+<details>
+  <summary>Информация</summary>
 ## Возможности и принцип работы:
 
 * Разработка отслеживается (в расширении для vs-code) - Live Server -
@@ -88,6 +90,8 @@
 ## Про js:
 
 * JavaScript разбит на модули './js/modules', которые подключаются в './js/main.js'
+
+</details>
 
 # Ссылкы на верстку:
 ## Страница - [Главная](https://aaccent.github.io/loginov_layout/).

@@ -53,10 +53,6 @@
             display: none;
         }
     }
-    
-    &__tip {
-
-    }
 
     &__content {
         flex: 1 1 auto;
@@ -136,6 +132,7 @@
 
     &__text {
         max-width: 45.3rem;
+        color: var(--grey, #7e8397);
 
         @include breakpoint(small-tablet) {
             max-width: 100%;

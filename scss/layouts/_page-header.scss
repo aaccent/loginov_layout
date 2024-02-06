@@ -11,11 +11,6 @@
     background: var(--white, #FFF);
     will-change: transform;
     transition: transform 0.3s ease-out;
-    
-    &.page-header--fixed {
-        position: fixed;
-        animation: transAnim 0.4s ease-out 1 forwards;
-    }
 
     &__inner-wrapper {
         position: relative;
@@ -37,15 +32,16 @@
         max-width: calc(var(--max-header-container-width, 184rem) + 2 * var(--content-padding, 2rem));
         margin: 0 auto;
         padding: 0 var(--content-header-padding, 2rem);
-    
+
         @supports (width: unquote("max(20vw, 100px)")) {
             padding-left: unquote("max(env(safe-area-inset-left, 1.4rem), var(--content-header-padding, 2rem))");
             padding-right: unquote("max(env(safe-area-inset-right, 1.4rem), var(--content-header-padding, 2rem))");
         }
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+
 
         &--mobile {
             display: none;
@@ -69,7 +65,7 @@
         justify-content: center;
 
         &.menu {
-            > .menu__list  {
+            >.menu__list {
                 padding-left: 3rem;
             }
         }
@@ -115,7 +111,7 @@
         max-width: 100%;
         opacity: 0;
         visibility: hidden;
-        
+
         transform: translateY(-10%);
         transition: var(--transition);
         pointer-events: none;
@@ -148,6 +144,16 @@
         max-width: 100%;
         transition: opacity 0.4s ease-out 0.4s;
     }
+
+    &.page-header--fixed {
+        position: fixed;
+        animation: transAnim 0.4s ease-out 1 forwards;
+
+        .page-header__breadcrumbs {
+            transform: translateX(-50%) translateY(-100%);
+            visibility: hidden;
+        }
+    }
 }
 
 .dropdown-is-open {
@@ -176,14 +182,12 @@
         position: relative;
 
         &::before {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            
-            background: rgba(1, 18, 21, 0.10);
+            animation: opacityAnim 0.3s ease 0s 1 forwards;
             content: "";
+        }
+
+        section {
+            z-index: 1;
         }
     }
 }
@@ -201,13 +205,28 @@
         opacity: 1;
         pointer-events: all;
     }
+
+    .page-header__breadcrumbs {
+        display: none;
+    }
 }
 
 @keyframes transAnim {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(0%);
+    }
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

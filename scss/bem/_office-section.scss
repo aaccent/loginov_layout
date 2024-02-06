@@ -9,6 +9,7 @@
             grid-template-columns: 100%;
             grid-template-rows: 1fr 1fr;
             gap: 3rem;
+            padding: 6rem 0 8rem;
         }
     }
 
@@ -40,6 +41,10 @@
             @include breakpoint(mobile) {
                 width: 150%;
             }
+        }
+
+        @include breakpoint(portrait-tablet) {
+            order: -1;
         }
 
         @include breakpoint(mobile) {

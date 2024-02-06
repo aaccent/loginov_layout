@@ -42,6 +42,7 @@
 
         span {
             color: var(--black, #231F20);
+            font-weight: 500;
         }
     }
 
@@ -56,6 +57,7 @@
     }
 
     &__role {
+        color: var(--grey, #7e8397);
         font-style: normal;
     }
 
@@ -88,6 +90,10 @@
                     @include font(2rem, 1.25, 600);
                     margin-bottom: 2.5rem;
                 }
+            }
+
+            span {
+                color: var(--grey, #7e8397);
             }
         }
     }

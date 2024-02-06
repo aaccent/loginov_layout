@@ -28,6 +28,7 @@ import youtubeVideoControl from './modules/youtubeVideoControl.js';
 import autoCounterAnimatiion from './modules/autoCounterAnimatiion.js';
 import textParallax from './modules/textParallax.js';
 import preventSubmitEvent from './modules/preventSubmitEvent.js';
+import textScrollAnimation from './modules/textScrollAnimation.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -37,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.remove('preload');
     }, 500);
 
+    // activate animation:
     setTimeout(() => {
         body.classList.remove('animate-trigger');
     }, 1000);
-    
 
     // inits modals:
     const modal = new Modal({
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // inits partrners swiper:
     setTimeout(() => {
         partnershipSwiperAnimation();
     }, 1000)
@@ -111,4 +113,5 @@ document.addEventListener("DOMContentLoaded", () => {
     gallerySwiperControl();
     youtubeVideoControl();
     preventSubmitEvent();
+    textScrollAnimation();
 })

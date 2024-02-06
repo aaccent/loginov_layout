@@ -227,6 +227,7 @@
         }
 
         .hero__body {
+            position: relative;
             aspect-ratio: 2.37 / 1;
             max-width: unset;
             padding: unset;
@@ -264,7 +265,7 @@
             @include breakpoint(portrait-tablet) {
                 min-height: calc(100dvh - 4rem);
             }
-            
+
             .hero__body {
                 position: relative;
                 width: 100%;
@@ -293,20 +294,26 @@
 
     &__name-slogan-wrapper {
         position: absolute;
-        left: 50%;
         bottom: 0;
+        left: 50%;
         z-index: 20;
 
-        display: flex;
-        align-items: center;
-        column-gap: 0;
-
         width: calc(100% - 2.4rem);
-        transform: translate(-50%, 3%);
+
+        transform: translate(-50%, 25%);
+
+        @include breakpoint(portrait-tablet) {
+            transform: translate(-50%, 50%);
+        }
     }
 
     &__name-slogan {
         width: 100%;
+
+        .icon {
+            height: auto;
+            aspect-ratio: 9.25773 / 1;
+        }
     }
 
     &--empty {
@@ -419,7 +426,7 @@
                     margin-bottom: 1.5rem;
                 }
             }
-            
+
             span {
                 display: block;
                 max-width: 86.5rem;
@@ -488,10 +495,9 @@
                 margin-bottom: 2rem;
                 padding-bottom: 1.5rem;
             }
-    
+
         }
     }
-
 }
 
 
@@ -505,12 +511,14 @@
                         transform: translateY(-20%);
                     }
                 }
+
                 span:nth-child(2) {
                     @include breakpointMF(laptop) {
                         opacity: 0;
                         transform: translateY(-20%);
                     }
                 }
+
                 span:nth-child(3) {
                     @include breakpointMF(laptop) {
                         opacity: 0;
@@ -527,7 +535,7 @@
                 opacity: 0;
                 transform: translateY(10%);
             }
-            
+
             &.image-slide {
                 img {
                     @include breakpointMF(laptop) {

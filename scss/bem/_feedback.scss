@@ -1,0 +1,123 @@
+.feedback {
+    &__body {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+        column-gap: 6rem;
+        padding: 7rem 8rem;
+
+        border-radius: 3rem;
+        background-color: var(--back-2, #f3f4f8);
+
+        &::before {
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            z-index: 1;
+    
+            display: block;
+            width: 14rem;
+            height: 17rem;
+    
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22134%22%20height%3D%22169%22%20viewBox%3D%220%200%20134%20169%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M103.34%2090.717H92.5332L70.3164%2035.7129H86.4706L98.2192%2069.3161L125.52%20-5.39941H141.862C129.21%2026.6644%20116.595%2058.6907%20103.905%2090.717H103.34ZM119.984%2074.4974V89.891H135.423V74.4974H119.984Z%22%20fill%3D%22%23EBECF2%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M104.47%2090.7168H115.277L137.494%20145.721H121.34L109.591%20112.118L82.2908%20186.833H65.9482C78.6005%20154.769%2091.2151%20122.743%20103.905%2090.7168H104.47ZM87.8261%20106.974V91.5803H72.3873V106.974H87.8261Z%22%20fill%3D%22%23EBECF2%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M33.8277%20203.128H23.0205L0.803711%20148.124H16.958L28.7065%20181.727L56.0068%20107.012H72.3493C59.697%20139.076%2047.0825%20171.102%2034.3926%20203.128H33.8277ZM50.5091%20186.871V202.265H65.9479V186.871H50.5091Z%22%20fill%3D%22%23EBECF2%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            content: "";
+    
+            @include breakpoint(portrait-tablet) {
+                width: 7.8rem;
+                height: 8.1rem;
+            }
+        }
+
+        @include breakpoint(desktop) {
+            column-gap: 4rem;
+            padding: 5rem 6rem;
+        }
+
+        @include breakpoint(laptop) {
+            column-gap: 2rem;
+            padding: 4rem 2rem;
+            border-radius: 1.5rem;
+        }
+        
+        @include breakpoint(portrait-tablet) {
+            flex-direction: column;
+            align-items: stretch;
+            column-gap: unset;
+        }
+    }
+
+    &__heading {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+
+
+        @include breakpoint(desktop) {
+            flex: 0 1 50%;
+        }
+
+        @include breakpoint(laptop) {
+            flex: 0 1 100%;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 2rem;
+        }
+
+        .h2 {
+            min-width: 21ch;
+            margin-bottom: 2rem;
+
+            @include breakpoint(desktop) {
+                min-width: unset;
+            }
+
+            @include breakpoint(portrait-tablet) {
+                max-width: 32ch;
+            }
+        }
+    }
+
+    &__form {
+        flex: 1 1 auto;
+        padding-top: 0.5rem;
+        padding-left: 10.2rem;
+
+        border-style: solid;
+        border-color: #E2E5F0;
+        border-width: 0 0 0 1px;
+
+        @include breakpoint(desktop) {
+            padding-left: 6.2rem;
+        }
+        
+        @include breakpoint(laptop) {
+            padding-left: 3.2rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            padding-top: 2rem;
+            padding-left: unset;
+            border-width: 1px 0 0 0;
+        }
+    }
+
+    &__author {
+        .author__desc {
+            span {
+                @include breakpoint(small-tablet) {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

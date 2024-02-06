@@ -17,9 +17,9 @@
 @import 'layouts/modal';
 @import 'layouts/page-header';
 @import 'layouts/page-footer';
-// @import 'layouts/grid';
 
 // LIBS:
+// swiper.js =>
 @import '../js/libs/swiper/swiper.scss';
 @import '../js/libs/swiper/modules/effect-fade.scss';
 @import '../js/libs/swiper/swiper-vars.scss';
@@ -55,6 +55,7 @@
 @import 'bem/header-dropdown';
 @import 'bem/inputs-block';
 @import 'bem/author';
+@import 'bem/feedback';
 @import 'bem/copyright';
 @import 'bem/developer';
 @import 'bem/footer-contacts';
@@ -69,6 +70,7 @@
 @import 'bem/statistics';
 @import 'bem/quatro';
 @import 'bem/reviews';
+@import 'bem/review';
 @import 'bem/partnership';
 @import 'bem/partner';
 @import 'bem/stages';

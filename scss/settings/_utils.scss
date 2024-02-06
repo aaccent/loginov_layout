@@ -46,7 +46,7 @@
 }
 
 ._white-color {
-    color: var(--white);
+    color: var(--white, #fff);
 }
 
 input::placeholder {
@@ -90,5 +90,24 @@ textarea:required:valid {
 
     &__grey {
         color: var(--grey-2, #a4a8b8)
+    }
+}
+
+.animated-text {
+    &__colored {
+        .span-outer {
+            position: relative;
+        }
+
+        .span-inner {
+            position: absolute;
+            display: inline-block;
+            overflow:hidden;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: var(--black, #231F20) !important;
+            font-style: normal;
+        }
     }
 }

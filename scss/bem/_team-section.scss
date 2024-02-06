@@ -68,6 +68,10 @@
 
     &__title {
         @include font(2.2rem, 1.3636, 600, 2rem);
+
+        @include breakpoint(small-tablet) {
+            @include font(1.8rem, 1.3888, 600, 1rem);
+        }
     }
 
     &__text-wrapper {
@@ -92,7 +96,10 @@
         flex-direction: row-reverse;
         margin-bottom: 3.5rem;
 
-        li {            
+        li {      
+            position: relative;
+            flex-shrink: 0;
+
             &:not(:last-child) {
                 margin-left: -2rem;
             }
@@ -111,7 +118,7 @@
         width: 8rem;
         height: 8rem;
         overflow: hidden;
-        border-radius: 8rem;
+        border-radius: 100%;
         border: 0.3rem solid var(--white, #FFF);
 
         @include breakpoint(small-tablet) {

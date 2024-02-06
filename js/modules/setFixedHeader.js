@@ -9,9 +9,8 @@ export default () => {
     if(!header) return;
 
     let strHeader = ScrollTrigger.create({
-        trigger: document.querySelectorAll('section')[1],
-        start: "top bottom",
-
+        trigger : 'body', 
+        start: "top -300px",
         onUpdate: (self) => {
             if(self.direction < 0) {
                 header.classList.add('page-header--fixed');

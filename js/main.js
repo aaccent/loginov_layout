@@ -29,6 +29,7 @@ import autoCounterAnimatiion from './modules/autoCounterAnimatiion.js';
 import textParallax from './modules/textParallax.js';
 import preventSubmitEvent from './modules/preventSubmitEvent.js';
 import textScrollAnimation from './modules/textScrollAnimation.js';
+import articleNavRender from './modules/articleNavRender.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -111,7 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
     tipsAnmation();
     selectContol();
     gallerySwiperControl();
-    youtubeVideoControl();
     preventSubmitEvent();
     textScrollAnimation();
+    articleNavRender();
+    setTimeout(() => {
+        youtubeVideoControl();
+    }, 200);
 })

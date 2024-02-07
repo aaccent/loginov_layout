@@ -15,6 +15,10 @@
                 margin-bottom: 0;
             }
 
+            @include safariMobileSupport() {
+                display: inline-block;
+            }
+
             @include breakpoint(small-mobile) {
                 margin-bottom: 1.5rem;
 

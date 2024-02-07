@@ -4,7 +4,7 @@ import {ScrollTrigger} from "../libs/gsap/src/ScrollTrigger.js"
 gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
-    const header = document.querySelector('.page-header');
+    const header = document.querySelector('.page-header:not(._article)');
 
     if(!header) return;
 

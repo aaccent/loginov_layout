@@ -20,7 +20,7 @@
     <body class="preload">
         <div class="wrapper">
             <!-- #### page header section with dropdwon-menu, mobile-menu, breadcrumbs #### -->
-            <header class="page-header fix-block">
+            <header class="page-header fix-block _article">
                 <div class="page-header__inner-wrapper">
                     <div class="page-header__site-container page-header__site-container--desktop">
                         <a href="/" class="logo">
@@ -580,7 +580,7 @@
                     </div>
                 </section>
 
-                <div class="section section--article documents documents--article">
+                <div class="section section--article documents documents--article js-article-with-nav">
                     <div class="documents__site-container">
                         <article>
                             <div>
@@ -754,9 +754,24 @@
                                     <li><span>Индивидуальный подход к проблеме</span></li>
                                 </ul>
 
-                                <div class="article-video">
-                                    <div class="article-video__container js-video-box" data-youtube-id="lJIrF4YjHfQ"></div>
+                                <div class="article-video js-video-box">
+                                    <div class="article-video__container" data-youtube-id="lJIrF4YjHfQ"></div>
+                                    <div class="article-video__poster">
+                                        <button type="button"></button>
 
+                                        <div class="article-video__picture">
+                                            <picture>
+                                                <source type="image/webp"
+                                                    srcset="./images/video/poster.webp" alt="video poster"/>
+                                                <img class="lazy" src="./images/video/poster.jpg" alt="video poster">
+                                            </picture>
+                                        </div>
+
+                                        <p class="article-video__heading"> 
+                                            <i class="article-video__time">02:46</i>
+                                            <span class="article-video__slogan">Работа с нами — это просто</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -836,58 +851,7 @@
                             <nav>
                                 <h4>Содержание статьи:</h2>
 
-                                <ul style="list-style-type:none">
-                                    <li>
-                                        <a href="#anchor-1">
-                                            <svg class="icon">
-                                                <use xlink:href="./images/sprite.svg#arrow-forward"></use>
-                                            </svg>
-                                            <span>
-                                                Начало работы
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#anchor-2">
-                                            <svg class="icon">
-                                                <use xlink:href="./images/sprite.svg#arrow-forward"></use>
-                                            </svg>
-                                            <span>
-                                                Необходимые документы
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#anchor-3">
-                                            <svg class="icon">
-                                                <use xlink:href="./images/sprite.svg#arrow-forward"></use>
-                                            </svg>
-                                            <span>
-                                                Особенности оформление
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="./images/sprite.svg#arrow-forward"></use>
-                                            </svg>
-                                            <span>
-                                                Начало работы
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="./images/sprite.svg#arrow-forward"></use>
-                                            </svg>
-                                            <span>
-                                                Необходимые документы
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <ul style="list-style-type:none"></ul>
                             </nav>
                         </aside>
                     </div>

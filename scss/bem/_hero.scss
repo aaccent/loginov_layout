@@ -274,8 +274,7 @@
             }
 
             .hero__site-container {
-                position: relative;
-                z-index: 50;
+                position: static;
                 padding-top: 6rem;
                 padding-bottom: 6rem;
 
@@ -286,7 +285,7 @@
 
                 @include breakpoint(portrait-tablet) {
                     padding-top: 1.5rem;
-                    padding-bottom: 30vh;
+                    padding-bottom: 28.5rem;
                 }
             }
         }
@@ -477,6 +476,8 @@
     }
 
     &__map-popup {
+        position: relative;
+        z-index: 55;
         max-width: 50rem;
         padding: 3.5rem 4rem;
         background-color: var(--white, #fff);

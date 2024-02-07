@@ -1,4 +1,4 @@
-export default () => {
+export default async () => {
     const playerBoxes = document.querySelectorAll('.js-video-box');
 
     if(playerBoxes.length > 0) {
@@ -10,14 +10,18 @@ export default () => {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         Array.from(playerBoxes).forEach( playerBox => {
-            let videoId;
-            playerBox.dataset.youtubeId ? ( videoId = playerBox.dataset.youtubeId ) : ( videoId = 'lJIrF4YjHfQ');
+            var videoContainer = playerBox.firstElementChild;
+            videoContainer.id = getRandomInt(4000);
 
-            let btn = playerBox.parentElement.querySelector('button');
+            var videoId;
+            videoContainer.dataset.youtubeId ? ( videoId = videoContainer.dataset.youtubeId ) : ( videoId = 'lJIrF4YjHfQ');
 
-            let player;
+            var btn = playerBox.parentElement.querySelector('button');
+
+            var player;
+            
             window.onYouTubeIframeAPIReady = function() {
-                player = new YT.Player( playerBox, {
+                player = new YT.Player( videoContainer.id, {
                     width: 1000,
                     height: 530,
                     videoId: videoId,
@@ -54,6 +58,10 @@ export default () => {
     
     } else {
         return;
+    }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
     }
 }
 

@@ -126,6 +126,7 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
+  color: inherit;
   -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
   cursor: pointer;
@@ -4770,8 +4771,7 @@ button.swiper-pagination-bullet {
   aspect-ratio: unset;
 }
 .hero--about.hero--map .hero__site-container {
-  position: relative;
-  z-index: 50;
+  position: static;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
@@ -4784,7 +4784,7 @@ button.swiper-pagination-bullet {
 @media only screen and (max-width: 992px) {
   .hero--about.hero--map .hero__site-container {
     padding-top: 1.5rem;
-    padding-bottom: 30vh;
+    padding-bottom: 28.5rem;
   }
 }
 .hero__name-slogan-wrapper {
@@ -4983,6 +4983,8 @@ button.swiper-pagination-bullet {
   z-index: 40;
 }
 .hero__map-popup {
+  position: relative;
+  z-index: 55;
   max-width: 50rem;
   padding: 3.5rem 4rem;
   background-color: var(--white, #fff);
@@ -5619,9 +5621,6 @@ button.swiper-pagination-bullet {
   }
 }
 .presentation__image-block {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 36.5%;
-          flex: 1 0 36.5%;
   max-height: 68rem;
   aspect-ratio: 1/1.328;
   margin-right: 8rem;
@@ -5636,6 +5635,10 @@ button.swiper-pagination-bullet {
 }
 @media only screen and (max-width: 1199px) {
   .presentation__image-block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    width: 100%;
     max-height: 40rem;
     margin-bottom: 2.5rem;
     margin-right: unset;
@@ -7036,6 +7039,11 @@ button.swiper-pagination-bullet {
 .seo-section__text p:last-child {
   margin-bottom: 0;
 }
+@supports (-webkit-touch-callout: none) {
+  .seo-section__text p {
+    display: inline-block;
+  }
+}
 @media only screen and (max-width: 576px) {
   .seo-section__text p {
     margin-bottom: 1.5rem;
@@ -7857,6 +7865,8 @@ button.swiper-pagination-bullet {
   overflow: visible;
   width: unset;
   height: unset;
+  border: none;
+  background-color: transparent;
 }
 @media only screen and (max-width: 1280px) {
   .documents article blockquote .citation__inner-author.author .author__userpic > img {
@@ -8228,6 +8238,9 @@ button.swiper-pagination-bullet {
     width: 0.5rem;
     height: 0.8rem;
   }
+}
+.documents aside nav ul li a > span {
+  white-space: nowrap;
 }
 .documents aside nav ul li a:hover {
   color: var(--blue, #00a9c1);
@@ -9176,8 +9189,8 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 .ya-placemark .icon {
-  width: 8rem;
-  height: 9.5rem;
+  width: 6rem;
+  height: 7.1rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }

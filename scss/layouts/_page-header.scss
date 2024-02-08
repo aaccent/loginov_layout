@@ -221,6 +221,16 @@
     }
 }
 
+@keyframes transAnimReverse {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
 @keyframes opacityAnim {
     0% {
         opacity: 0;

@@ -9,11 +9,13 @@ export default () => {
     if(!header) return;
 
     let strHeader = ScrollTrigger.create({
-        trigger : 'body', 
-        start: "top -300px",
+        trigger : document.querySelector('.wrapper'),
+        start: "0", 
         onUpdate: (self) => {
             if(self.direction < 0) {
                 header.classList.add('page-header--fixed');
+            } else {
+                header.classList.remove('page-header--fixed');
             }
         },
         onLeaveBack: () => {

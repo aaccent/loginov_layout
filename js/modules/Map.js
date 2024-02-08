@@ -61,6 +61,7 @@ export default class Map {
             clusterOpenBalloonOnClick: false,
         });
 
+
         this.clusterer.events.add('click', (e) => {
             const coords = e.get('target').geometry.getCoordinates();
             console.log(coords);
@@ -82,6 +83,11 @@ export default class Map {
         const mediaQuery = window.matchMedia('(max-width: 992px)');
         mediaQuery.matches ? (translate = [ position[0], position[1] - 200 ]) : (translate = [ position[0], position[1] ]);
         this.map.setGlobalPixelCenter(translate);
+
+        if (mediaQuery.matches) {           
+            this.map.behaviors.disable('drag');
+            this.map.behaviors.enable('MultiTouch');
+        }
 
         this.clusterer.add(geoObjects);
         this.map.geoObjects.add(this.clusterer);

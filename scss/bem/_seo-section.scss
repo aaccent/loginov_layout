@@ -9,14 +9,15 @@
 
     &__text {
         p {
+            display: inline;
             margin-bottom: 2rem;
 
             &:last-child {
                 margin-bottom: 0;
             }
 
-            @include safariMobileSupport() {
-                display: inline-block;
+            @include onlyChromiumSupport() {
+                display: block;
             }
 
             @include breakpoint(small-mobile) {

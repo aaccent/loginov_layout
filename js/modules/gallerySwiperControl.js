@@ -23,7 +23,9 @@ export default () => {
             breakpoints: {
                 992: {
                     slidesPerView: 2,
+                    slidesPerGroup: 1,
                     spaceBetween: 20,
+                    loop: true,
                 },
             }
         })

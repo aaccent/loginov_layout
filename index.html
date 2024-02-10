@@ -183,11 +183,6 @@
                                 </li>
                                 <li>
                                     <a href="" class="header-dropdown__link">
-                                        Открытие компании в Астана Хаб
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="header-dropdown__link">
                                         Открытие компании в МФЦА
                                     </a>
                                 </li>
@@ -1045,8 +1040,8 @@
                                         <img src="./images/citation/userpic.png" alt="citation's author avatar">
                                     </div>
                                     <div class="author__desc">
-                                        <h2 class="h2 title-decorated animated-text">
-                                            <p class="title-decorated__dark">
+                                        <h2 class="h2 title-decorated animated-text js-animated-text-trigger">
+                                            <p class="title-decorated__dark animated-text__dark">
                                                 Иммиграция с нами – это просто и надежно!&nbsp;
                                             </p>
                                             <p class="title-decorated__grey animated-text__colored">
@@ -1130,7 +1125,7 @@
 
                             <div id="number-container" class="presentation__statistics statistics">
                                 <div class="statistics__item">
-                                    <span class="statistics__count h1 round-log">
+                                    <span class="statistics__count h1 round-log-year">
                                         0
                                     </span>
 
@@ -1140,8 +1135,9 @@
                                 </div>
 
                                 <div class="statistics__item">
-                                    <span class="statistics__count statistics__count--plus h1">
-                                        500
+                                    <span data-clients="500"
+                                        class="statistics__count statistics__count--plus h1 round-log-clients">
+                                        0
                                     </span>
 
                                     <span class="statistics__text">
@@ -1155,14 +1151,14 @@
                                     <span>Подробнее о компании</span>
                                 </a>
 
-                                <a href="#" class="map-link">
+                                <div class="map-link">
                                     <svg class="icon">
                                         <use xlink:href="./images/sprite.svg#pin"></use>
                                     </svg>
                                     <span>
                                         Офис находится в Казахстане
                                     </span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1538,7 +1534,17 @@
                             <div class="partnership__slider">
                                 <div id="js-partnership-swiper-one"
                                     class="partnership__swiper swiper js-partnership-swiper-one">
-                                    <ul class="partnership__swiper-wrapper swiper-wrapper">
+                                    <ul class="partnership__swiper-wrapper partnership__swiper-wrapper--one swiper-wrapper">
+                                        <li class="partnership__swiper-slide swiper-slide partner">
+                                            <div class="partner__body">
+                                                <div class="partner__image">
+                                                    <img src="./images//partners/image.png" alt="partners logo">
+                                                </div>
+                                                <span class="partner__text">
+                                                    Команда Сбербанка
+                                                </span>
+                                            </div>
+                                        </li>
                                         <li class="partnership__swiper-slide swiper-slide partner">
                                             <div class="partner__body">
                                                 <div class="partner__image">
@@ -1605,7 +1611,17 @@
                             <div class="partnership__slider partnership__slider--second">
                                 <div id="js-partnership-swiper-two"
                                     class="partnership__swiper swiper js-partnership-swiper-two">
-                                    <ul class="partnership__swiper-wrapper swiper-wrapper">
+                                    <ul class="partnership__swiper-wrapper partnership__swiper-wrapper--two swiper-wrapper">
+                                        <li class="partnership__swiper-slide swiper-slide partner">
+                                            <div class="partner__body">
+                                                <div class="partner__image">
+                                                    <img src="./images//partners/image.png" alt="partners logo">
+                                                </div>
+                                                <span class="partner__text">
+                                                    Команда Сбербанка
+                                                </span>
+                                            </div>
+                                        </li>
                                         <li class="partnership__swiper-slide swiper-slide partner">
                                             <div class="partner__body">
                                                 <div class="partner__image">
@@ -1903,7 +1919,6 @@
                     </div>
                 </div>
             </section>
-
         </main>
 
         <!-- ###### page footer section with feedback-form####### -->
@@ -1944,7 +1959,7 @@
                                 <div class="inputs-block__row">
                                     <input type="tel" name="feedback-phone" autocomplete="off" id="feedback-phone"
                                         class="inputs-block__input input input--white js-phone-input"
-                                        placeholder="+7 (___) ___-__-__" required data-parsley-phone >
+                                        placeholder="+7 (___) ___-__-__" required data-parsley-phone>
                                 </div>
                                 <div class="inputs-block__row">
                                     <button type="submit" class="button inputs-block__button">

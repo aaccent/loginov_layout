@@ -4,7 +4,7 @@
     border-radius: 2rem;
     background-color: var(--white, #FFF);
 
-    @include breakpoint(portrait-tablet) {
+    @include breakpoint(tablet) {
         width: 26rem;
         height: 17.5rem;
         border-radius: 1rem;
@@ -29,7 +29,7 @@
             object-fit: contain;
             object-position: center;
             
-            @include breakpoint(portrait-tablet) {
+            @include breakpoint(tablet) {
                 width: 50%;
             }
         }

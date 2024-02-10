@@ -112,6 +112,10 @@
             height: 56.5rem;
         }
 
+        @include breakpoint(tablet) {
+            margin: 0 auto;
+        }
+
         @include breakpoint(portrait-tablet) {
             width: 100%;
             height: auto;
@@ -154,10 +158,29 @@
     &__swiper-wrapper  {
         &.swiper-wrapper {
             flex-direction: column;
-            // transition-timing-function: linear;
+            align-items: center;
+            justify-content: center;
+            will-change: transform;
+            transition-timing-function: ease-out;
 
             @include breakpoint(portrait-tablet) {
                 flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__swiper-slide {
+        &.swiper-slide {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint(portrait-tablet) {
+                margin-bottom: 0;
             }
         }
     }

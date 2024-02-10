@@ -1,5 +1,6 @@
 
 .header-dropdown {
+    min-height: 26.5rem;
     background: var(--back-2, #f3f4f8);
     border-radius: 0px 0px 3rem 3rem;
     overflow: hidden;
@@ -51,8 +52,10 @@
     }
 
     &__button {
+        position: relative;
         transition: var(--transition);
         cursor: pointer;
+
         @include font(2.8rem, 0.893, 500);
 
         &::before {
@@ -78,7 +81,6 @@
         }
 
         &--active {
-            position: relative;
             padding-left: 2rem;
 
             color: var(--blue, #00A9C1);
@@ -110,7 +112,6 @@
         display: flex;
         flex-flow: row wrap;
         row-gap: 2rem;
-        height: 100%;
 
         &--hidden {
             @include visuallyHidden;

@@ -9,7 +9,7 @@ export default () => {
             slidesPerView: 1.06,
             spaceBetween: 10,
             speed: 900,
-            // autoHeight: true,
+            loop: true,
 
             navigation: {
                 prevEl: revSwiperBox.querySelector('.reviews__control-prev'),

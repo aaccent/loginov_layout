@@ -44,6 +44,7 @@
         &--plus {
             display: flex;
             align-items: center;
+            min-width: 4ch;
 
             &::after {
                 content: "+";

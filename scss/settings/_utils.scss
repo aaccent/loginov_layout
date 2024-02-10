@@ -94,14 +94,35 @@ textarea:required:valid {
 }
 
 .animated-text {
+    p {
+        display: inline-flex;
+        flex-wrap: wrap;
+        column-gap: 1ch;
+        width: 100%;
+    }
+
+    &__dark {
+        @include breakpoint(mobile) {
+            max-width: 27rem;
+        }
+    }
+
     &__colored {
         .span-outer {
             position: relative;
+            display: inline-block;
+            white-space: nowrap;
+
+            &:nth-child(2) {
+                @include breakpoint(mobile) {
+                    display: none;
+                }
+            }
         }
 
         .span-inner {
             position: absolute;
-            display: inline-block;
+            display: inline;
             overflow:hidden;
             left: 0;
             width: 0;

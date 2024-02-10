@@ -23,6 +23,7 @@
 @import '../js/libs/swiper/swiper.scss';
 @import '../js/libs/swiper/modules/effect-fade.scss';
 @import '../js/libs/swiper/swiper-vars.scss';
+@import '../js/libs/swiper/modules/mousewheel.scss';
 @import '../js/libs/swiper/modules/pagination.scss';
 // fancybox =>
 @import '../js/libs/fancybox/fancybox/fancybox.css';
@@ -49,6 +50,7 @@
 @import 'bem/menu';
 @import 'bem/contacts';
 @import 'bem/contact';
+@import 'bem/phone';
 @import 'bem/breadcrumbs';
 @import 'bem/mobile-menu';
 @import 'bem/menu-dropdown';

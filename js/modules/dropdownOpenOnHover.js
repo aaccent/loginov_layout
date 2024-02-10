@@ -1,11 +1,13 @@
 export default () => {
     const dropDownLink = document.querySelector('.js-header-dropdown');
+    const header = document.querySelector('.page-header') 
 
-    if(!dropDownLink) return;
+    if(!dropDownLink || !header) return;
 
     dropDownLink.addEventListener('mouseover', (e) => {
-        document.body.classList.add('dropdown-is-open');
+        e.preventDefault();
 
+        document.body.classList.add('dropdown-is-open');
 
         window.addEventListener('click', (e) => {
             if(!e.target.closest('.page-header__dropdown')) {
@@ -14,6 +16,10 @@ export default () => {
         })
 
         window.addEventListener('scroll', (e) => {
+            document.body.classList.remove('dropdown-is-open');
+        })
+
+        header.addEventListener('mouseleave', (e) => {
             document.body.classList.remove('dropdown-is-open');
         })
     })

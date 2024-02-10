@@ -21,7 +21,7 @@ import partnershipSwiperAnimation from './modules/partnershipSwiperAnimation.js'
 import pressCenterSwiper from './modules/pressCenterSwiper.js';
 import seoTextExpand from './modules/seoTextExpand.js';
 import inputFileTextSet from './modules/inputFileTextSet.js';
-import tipsAnmation from './modules/tipsAnmation.js';
+import tipsAnimation from './modules/tipsAnimation.js';
 import selectContol from './modules/selectContol.js';
 import gallerySwiperControl from './modules/gallerySwiperControl.js';
 import youtubeVideoControl from './modules/youtubeVideoControl.js';
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pressCenterSwiper();
     seoTextExpand();
     inputFileTextSet();
-    tipsAnmation();
+    tipsAnimation();
     selectContol();
     gallerySwiperControl();
     preventSubmitEvent();

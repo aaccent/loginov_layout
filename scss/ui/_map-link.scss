@@ -2,18 +2,27 @@
     display: flex;
     align-items: center;
     column-gap: 0.8rem;
-    cursor: pointer;
 
     .icon {
         width: 2.5rem;
         height: 2.5rem;
         fill: var(--yellow, #efef00);
-        transition: fill var(--transition);
+        animation: svgFill 2s ease-in-out 0s infinite forwards;
     }
 
-    &:hover {
-        .icon {
-            fill: var(--blue, #00A9C1);
-        }
+    span {
+        white-space: nowrap;
+    }
+}
+
+@keyframes svgFill {
+    0% {
+        fill: var(--yellow, #efef00);
+    };
+    50% {
+        fill: var(--blue, #00A9C1);
+    };
+    100% {
+        fill: var(--yellow, #efef00);
     }
 }

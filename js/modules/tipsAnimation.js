@@ -7,9 +7,9 @@ export default () => {
             {backgroundColor: "#FFFF20"},
             {backgroundColor: "#E8F7F8"},
         ],
-        delay: anime.stagger(800),
+        delay: anime.stagger(1200),
         easing: 'easeInOutQuad',
-        duration: 1300,
+        duration: 2000,
         loop: true
     });
 }

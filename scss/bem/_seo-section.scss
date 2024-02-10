@@ -32,7 +32,7 @@
 
     &__body {
         .expand {
-            display: none;
+            // display: none;
             margin-top: 2.5rem;
 
             @include breakpoint(small-mobile) {

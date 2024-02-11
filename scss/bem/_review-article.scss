@@ -1,5 +1,6 @@
 .review-article {    
-    padding-top: 4rem;
+    margin-top: 6rem;
+    padding-top: 6rem;
 
     @include breakpoint(tablet) {
         padding-top: unset;
@@ -38,6 +39,7 @@
         }
 
         h3 {
+            margin-top: 0 !important;
             margin-bottom: 1.5rem !important; 
 
             @include breakpoint(small-tablet) {

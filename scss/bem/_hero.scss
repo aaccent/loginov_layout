@@ -298,8 +298,14 @@
         z-index: 20;
 
         width: calc(100% - 2.4rem);
-
+        will-change: contents;
         transform: translate(-50%, 25%);
+
+        @include breakpointMF(laptop) {
+            transition-property: opacity, transform;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+        }
 
         @include breakpoint(portrait-tablet) {
             transform: translate(-50%, 50%);
@@ -373,6 +379,11 @@
 
         @include breakpoint(portrait-tablet) {
             margin-top: 2rem;
+        }
+
+        @include breakpoint(mobile) {
+            flex-flow: column nowrap;
+            align-items: flex-start;
         }
     }
 
@@ -513,42 +524,52 @@
                 span:nth-child(1) {
                     @include breakpointMF(laptop) {
                         opacity: 0;
-                        transform: translateY(-20%);
+                        transform: translateY(50%);
                     }
                 }
 
                 span:nth-child(2) {
                     @include breakpointMF(laptop) {
                         opacity: 0;
-                        transform: translateY(-20%);
+                        transform: translateY(50%);
                     }
                 }
 
                 span:nth-child(3) {
                     @include breakpointMF(laptop) {
                         opacity: 0;
-                        transform: translateY(-20%);
+                        transform: translateY(50%);
                     }
                 }
             }
 
             .hero-slide__text {
-                opacity: 0;
+                @include breakpointMF(laptop) {
+                    opacity: 0;
+                }
             }
 
             .hero-slide__buttons {
-                opacity: 0;
-                transform: translateY(10%);
+                @include breakpointMF(laptop) {
+                    opacity: 0;
+                    transform: translateY(50%);
+                }
             }
 
             &.image-slide {
                 img {
                     @include breakpointMF(laptop) {
                         opacity: 0;
-                        // transform: translateX(10%) scale(1.05);
                     }
                 }
             }
+        }
+    }
+
+    .hero__name-slogan-wrapper {        
+        @include breakpointMF(laptop) {
+            opacity: 0;
+            transform: translate(-50%, 100%);
         }
     }
 }

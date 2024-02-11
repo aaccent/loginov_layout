@@ -25,21 +25,21 @@ export default () => {
             })
         })
 
-        gsap.from('.span-inner', { width: 0 })
+        gsap.set('.span-inner', { width: 0 })
 
         gsap.timeline({
             scrollTrigger:{
                     trigger: '.js-animated-text-trigger',
-                    scrub: 1,
+                    scrub: 5,
                     start: "top bottom",
-                    end: "bottom 100px"
+                    end: "bottom 50px"
                 }
             })
             .to('.span-inner', {
                 width: '100%', 
-                duration: 4, 
+                duration: 3.5, 
                 ease: "power1.in",
-                stagger: 2
+                stagger: 2.5
             })
     } else {
         return;

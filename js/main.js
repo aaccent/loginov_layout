@@ -14,8 +14,11 @@ import dropdownListControl from './modules/dropdownListControl.js';
 import menuDropdownsOpens from './modules/menuDropdownsOpens.js';
 import menuSwiperControl from './modules/menuSwiperControl.js';
 import openMobileMenu from './modules/openMobileMenu.js';
+import switchLocation from './modules/switchLocation.js';
 
 import heroMainSwiper from './modules/heroMainSwiper.js';
+import activitiesControl from './modules/activitiesControl.js';
+import headingsAnimations from './modules/headingsAnimations.js';
 import reviewsSwiperControl from './modules/reviewsSwiperControl.js';
 import partnershipSwiperAnimation from './modules/partnershipSwiperAnimation.js';
 import pressCenterSwiper from './modules/pressCenterSwiper.js';
@@ -101,7 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
     menuSwiperControl();
     openMobileMenu();
     setFixedHeader();
-
+    
+    switchLocation();
+    activitiesControl();
+    headingsAnimations();
     textParallax();
     autoCounterAnimatiion();
     heroMainSwiper();
@@ -115,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     preventSubmitEvent();
     textScrollAnimation();
     articleNavRender();
+
     setTimeout(() => {
         youtubeVideoControl();
     }, 200);

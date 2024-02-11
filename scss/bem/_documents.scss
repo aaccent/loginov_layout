@@ -1,11 +1,9 @@
 .documents {
-    &__site-container {
+    &__body {
         display: flex;
         column-gap: 6.5rem;
-        
         padding-top: 4.5rem;
         padding-bottom: 4.5rem;
-
         border-style: solid;
         border-width: 1px 0 1px 0;
         border-color: rgba(223, 224, 228, 0.80);
@@ -34,9 +32,14 @@
         }
 
         blockquote {
+            margin-top: 4rem;
             padding: 3.5rem 4rem;
             background-color: var(--back-3, #f5f6f9);
             border-radius: 3rem;
+
+            @include breakpoint(laptop) {
+                margin-top: 2.5rem;
+            }
 
             @include breakpoint(portrait-tablet) {
                 padding: 2rem;
@@ -93,25 +96,24 @@
         }
 
         > div {
-            margin-bottom: 4rem;
-
-            &:last-child {
-                margin-bottom: 0;
+            &:first-child {
+                h3,h4,h5 {
+                    margin-top: 0;
+                    padding-top: 0;
+                }
             }
 
-            @include breakpoint(laptop) {
-                margin-bottom: 2.5rem;
+            p {
+                display: block;
+                max-width: 100rem;
+                margin-bottom: 2rem;
 
                 &:last-child {
                     margin-bottom: 0;
                 }
-            }
-            
-            p {
-                span {
-                    display: block;
-                    max-width: 100rem;
-                    margin-bottom: 2rem;
+
+                @include breakpoint(portrait-tablet) {
+                    margin-bottom: 1rem;
 
                     &:last-child {
                         margin-bottom: 0;
@@ -120,7 +122,10 @@
             }
 
             ul {
+                list-style: none;
+
                 li {
+                    width: 100%;
                     margin-bottom: 1rem;
 
                     &:last-child {
@@ -132,18 +137,24 @@
                         display: block;
                         padding-left: 1.4rem;
                         cursor: pointer;
-                
-                        .icon {
+
+                        &::before {
                             position: absolute;
                             top: 50%;
                             left: 0;
                             z-index: 1;
-                
+                            display: block;
                             width: 0.6rem;
                             height: 1rem;
                             transform: translateY(-50%);
-                
-                            @include breakpoint(mobile) {
+                    
+                            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%226%22%20height%3D%2210%22%20viewBox%3D%220%200%206%2010%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1%201L5%205L1%209%22%20stroke%3D%22%2300A9C1%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            content: "";
+
+                            @include breakpoint(portrait-tablet) {
                                 width: 0.5rem;
                                 height: 0.8rem;
                             }
@@ -157,17 +168,27 @@
                             padding-left: 1rem;
                         }
                     }
+                }
+            }
 
-                    &::marker {
-                        font-size: 2rem;
-                        border-radius: 100%;
-                        color: var(--blue, #00A9C1);
-                        line-height: 1;
-                    }
+            ul:not(:has(li a))  {
+                li {
+                    position: relative;
+                    display: inline-block;
+                    padding-left: 1.6rem;
 
-                    > span {
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        z-index: 1;
                         display: inline-block;
-                        margin-left: -1rem;
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        transform: translateY(-50%);
+                        background-color: var(--blue, #00A9C1);
+                        border-radius: 100%;
+                        content: "";
                     }
                 }
             }
@@ -232,9 +253,11 @@
 
         h3 {
             @include h3;
+            margin-top: 6rem;
             margin-bottom: 3rem;
 
             @include breakpoint(laptop) {
+                margin-top: 4rem;
                 margin-bottom: 1.5rem;
 
                 &:last-child {
@@ -245,9 +268,11 @@
 
         h4 {
             @include h4;
+            margin-top: 6rem;
             margin-bottom: 2rem;
 
             @include breakpoint(laptop) {
+                margin-top: 4rem;
                 margin-bottom: 1.5rem;
 
                 &:last-child {
@@ -258,9 +283,11 @@
 
         h5 {
             @include h5;
+            margin-top: 6rem;
             margin-bottom: 2rem;
 
             @include breakpoint(laptop) {
+                margin-top: 4rem;
                 margin-bottom: 1rem;
 
                 &:last-child {
@@ -301,6 +328,7 @@
     aside {
         flex-shrink: 0;
 
+        > .tooltip,
         nav {
             position: sticky;
             top: 3rem;
@@ -383,46 +411,16 @@
     }
 
     &--case {
-        .documents__site-container {
+        .documents__body {
             padding-top: 0;
             padding-bottom: 0;
             border-width: 0;
-
-            @include breakpoint(portrait-tablet) {
-                flex-direction: column-reverse;
-            }
 
             article {
                 @include breakpoint(portrait-tablet) {
                     margin-bottom: 0;
                     padding-bottom: 0;
                     border-width: 0;
-                }
-
-                > div {
-                    padding: 3rem 0;
-
-                    &:first-child {
-                        padding: 0 0 3rem;
-                    }
-        
-                    &:last-child {
-                        margin-bottom: 0;
-                        padding: 3rem 0 0;
-                    }
-        
-                    @include breakpoint(laptop) {
-                        padding: 1.5rem 0 1rem;
-        
-                        &:first-child {
-                            padding: 0 0 1rem;
-                        }
-            
-                        &:last-child {
-                            margin-bottom: 0;
-                            padding: 1.5rem 0 0;
-                        }
-                    }
                 }
             }
 
@@ -435,7 +433,7 @@
     }
 
     &--article {
-        .documents__site-container {
+        .documents__body {
             padding-top: 0;
             padding-bottom: 0;
             border-width: 0;
@@ -445,6 +443,51 @@
             }
 
             article {
+                h3 {
+                    margin-top: 2rem;
+                    padding-top: 2rem;
+    
+                    @include breakpoint(laptop) {
+                        margin-top: 1rem;
+                        padding-top: 1.5rem;
+                        margin-bottom: 1.5rem;
+    
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+    
+                h4 {
+                    margin-top: 2rem;
+                    padding-top: 2rem;
+    
+                    @include breakpoint(laptop) {
+                        margin-top: 1rem;
+                        padding-top: 1.5rem;
+                        margin-bottom: 1.5rem;
+    
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+    
+                h5 {
+                    margin-top: 2rem;
+                    padding-top: 2rem;
+    
+                    @include breakpoint(laptop) {
+                        margin-top: 1rem;
+                        padding-top: 1.5rem;
+                        margin-bottom: 1rem;
+    
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
                 @include breakpoint(portrait-tablet) {
                     margin-bottom: 0;
                     padding-bottom: 0;
@@ -455,6 +498,49 @@
             aside {
                 @include breakpoint(portrait-tablet) {
                     margin-bottom: 2.5rem;
+                }
+            }
+        }
+    }
+
+    &--service {
+        article {   
+            h3 {
+                margin-top: 4rem;
+
+                @include breakpoint(laptop) {
+                    margin-top: 2.5rem;
+                    margin-bottom: 1.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            h4 {
+                margin-top: 4rem;
+
+                @include breakpoint(laptop) {
+                    margin-top: 2.5rem;
+                    margin-bottom: 1.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            h5 {
+                margin-top: 4rem;
+
+                @include breakpoint(laptop) {
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }

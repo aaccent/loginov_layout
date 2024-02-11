@@ -19,18 +19,20 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        will-change: transform;
+        transform-origin: center;
         transition: var(--transition);
         content: "";
 
         opacity: 0;
-        transform: translateY(-50%) scale(0);
+        transform: translateY(-54%) scale(0);
     }
 
     &:hover {
         padding-left: 1.4rem;
 
         &::before {
-            transform: translateY(-50%) scale(1);
+            transform: translateY(-54%) scale(1);
             opacity: 1;
         }
     }

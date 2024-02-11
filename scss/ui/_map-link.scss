@@ -8,6 +8,11 @@
         height: 2.5rem;
         fill: var(--yellow, #efef00);
         animation: svgFill 2s ease-in-out 0s infinite forwards;
+
+        @include breakpoint(portrait-tablet) {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
     }
 
     span {

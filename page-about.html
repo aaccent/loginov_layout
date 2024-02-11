@@ -97,7 +97,7 @@
 
                     <div class="page-header__buttons page-header__buttons--mobile">
 
-                        <button type="button" data-path="modal-number" class="contact contact--button contact--two">
+                        <button type="button" data-path="modal-number" class="contact contact--button contact--one">
                             <i class="contact__phone">
                                 8 (976) 543-21-00
                             </i>
@@ -576,8 +576,8 @@
                 <div class="team-section__site-container">
                     <div class="team-section__body">
                         <div class="team-section__item">
-                            <div class="team-section__left">
-                                <h2 class="h2">
+                            <div class="team-section__left js-h-animation-wrapper">
+                                <h2 class="h2 js-h-animation-target">
                                     Loginov Agency&nbsp;—<br> мост&nbsp;между&nbsp;Россией<br> и Казахстаном
                                 </h2>
                             </div>
@@ -604,10 +604,10 @@
                                         позиции требуют определения и уточнения новых.
                                     </p>
 
-                                    <div class="team-section__statistics statistics">
+                                    <div id="number-container" class="team-section__statistics statistics">
                                         <div class="statistics__item">
-                                            <span class="statistics__count h1">
-                                                20
+                                            <span class="statistics__count h1 round-log-year">
+                                                0
                                             </span>
 
                                             <span class="statistics__text">
@@ -616,8 +616,8 @@
                                         </div>
 
                                         <div class="statistics__item">
-                                            <span class="statistics__count statistics__count--plus h1">
-                                                500
+                                            <span data-clients="500" class="statistics__count statistics__count--plus h1  round-log-clients">
+                                                0
                                             </span>
 
                                             <span class="statistics__text">
@@ -697,8 +697,8 @@
                 <div class="office-section__site-container">
                     <div class="office-section__body">
                         <div class="office-section__left">
-                            <div class="partnership__info ">
-                                <div class="partnership__heading">
+                            <div class="partnership__info js-h-animation-wrapper">
+                                <div class="partnership__heading js-h-animation-target">
                                     <h2 class="h2">
                                         Офис&nbsp;находится<br> в&nbsp;Казахстане
                                     </h2>
@@ -726,8 +726,8 @@
             <section class="section gallery">
                 <div class="gallery__site-container">
                     <div class="gallery__body press-center__body press-center__swiper swiper js-gallery-swiper">
-                        <div class="press-center__navigations">
-                            <h2 class="h2 press-center__title">
+                        <div class="press-center__navigations js-h-animation-wrapper">
+                            <h2 class="h2 press-center__title js-h-animation-target">
                                 Фотогалерея
                             </h2>
                             <div class="gallery__control press-center__swiper-control">
@@ -789,7 +789,7 @@
                     </div>
                 </div>
             </section>
-
+         
             <section class="section citation">
                 <div class="page-header__site-container citation__outter-container">
                     <div class="hero__inner-wrapper citation__inner-wrapper">
@@ -800,13 +800,14 @@
                                         <img src="./images/citation/userpic.png" alt="citation's author avatar">
                                     </div>
                                     <div class="author__desc">
-                                        <h2 class="h2 title-decorated">
-                                            <p class="title-decorated__dark">
+                                        <h2 class="h2 title-decorated animated-text js-animated-text-trigger">
+                                            <p class="title-decorated__dark animated-text__dark">
                                                 Иммиграция с нами – это просто и надежно!&nbsp;
                                             </p>
-                                            <p class="title-decorated__grey">
+                                            <p class="title-decorated__grey animated-text__colored">
                                                 Получите высоко&shy;квалифицированную помощь в&nbsp;оформлении
-                                                документов, консультации по&nbsp;легальным вопросам и поддержку на каждом
+                                                документов, консультации по&nbsp;легальным вопросам и поддержку на
+                                                каждом
                                                 этапе вашего пути к новой жизни
                                             </p>
                                         </h2>
@@ -839,8 +840,8 @@
 
             <section class="section quatro page-footer__feedback _bg-back _color-white">
                 <div class="quatro__site-container">
-                    <div class="quatro__header section__header">
-                        <h2 class="h2">
+                    <div class="quatro__header section__header js-h-animation-wrapper">
+                        <h2 class="h2 js-h-animation-target">
                             Помогаем в&nbsp;92%&nbsp;обращений
                         </h2>
                     </div>

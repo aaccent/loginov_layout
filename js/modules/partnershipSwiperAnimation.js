@@ -26,7 +26,7 @@ export default () => {
             scrollTrigger:{
                     trigger: triggerSelector,
                     end: "bottom top",
-                    scrub: 0.3
+                    scrub: 1.5
                 }
             })
             .to(listSelector, {

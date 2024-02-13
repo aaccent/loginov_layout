@@ -11,7 +11,7 @@
         white-space: nowrap;
     }
 
-    span {
+    &__city {
         @include font(1.6rem, 1.25, 400);
 
         display: flex;
@@ -68,12 +68,15 @@
             @include font(1.4rem, 1.428, 600);
         }
 
-        span {
+        .contact__city {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
             @include font(1.4rem, 1.428, 600);
-        }
-
-        span::after {
-            content: "";
+            
+            &::after {
+                content: "";
+            }
         }
     }
 }

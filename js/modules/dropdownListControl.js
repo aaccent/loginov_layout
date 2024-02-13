@@ -5,7 +5,7 @@ export default () => {
     if(navButtons.length < 1) return;
 
     Array.from(navButtons).forEach( btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('mouseenter', () => {
             let dataLink = btn.dataset.link;
 
             Array.from(navButtons).forEach( b => {

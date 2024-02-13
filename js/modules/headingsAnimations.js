@@ -27,9 +27,10 @@ export default () => {
                 stagger: 1,
                 scrollTrigger:{
                     trigger: wrapper,
-                    scrub: 1.5,
                     start: "top center+=15%",
                     end: "top center+=15%", 
+                    once: true,
+                    scrub: 1.5,
                 }
             }
         );

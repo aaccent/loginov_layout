@@ -97,7 +97,7 @@
 
         > div {
             &:first-child {
-                h3,h4,h5 {
+                h2,h3,h4,h5 {
                     margin-top: 0;
                     padding-top: 0;
                 }
@@ -251,7 +251,7 @@
             }
         }
 
-        h3 {
+        h2 {
             @include h3;
             margin-top: 6rem;
             margin-bottom: 3rem;
@@ -266,7 +266,7 @@
             }
         }
 
-        h4 {
+        h3 {
             @include h4;
             margin-top: 6rem;
             margin-bottom: 2rem;
@@ -281,7 +281,7 @@
             }
         }
 
-        h5 {
+        h4, h5 {
             @include h5;
             margin-top: 6rem;
             margin-bottom: 2rem;
@@ -352,6 +352,8 @@
             }
 
             ul {
+                list-style: none;
+
                 li {
                     margin-bottom: 1rem;
 
@@ -443,9 +445,24 @@
             }
 
             article {
+                h2 {
+                    margin-top: 2rem;
+                    padding-top: 4rem;
+    
+                    @include breakpoint(laptop) {
+                        margin-top: 1rem;
+                        padding-top: 1.5rem;
+                        margin-bottom: 1.5rem;
+    
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+    
                 h3 {
                     margin-top: 2rem;
-                    padding-top: 2rem;
+                    padding-top: 4rem;
     
                     @include breakpoint(laptop) {
                         margin-top: 1rem;
@@ -457,25 +474,10 @@
                         }
                     }
                 }
-    
-                h4 {
+                
+                h4, h5 {
                     margin-top: 2rem;
-                    padding-top: 2rem;
-    
-                    @include breakpoint(laptop) {
-                        margin-top: 1rem;
-                        padding-top: 1.5rem;
-                        margin-bottom: 1.5rem;
-    
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-    
-                h5 {
-                    margin-top: 2rem;
-                    padding-top: 2rem;
+                    padding-top: 4rem;
     
                     @include breakpoint(laptop) {
                         margin-top: 1rem;

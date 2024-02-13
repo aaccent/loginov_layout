@@ -4,15 +4,16 @@ export default () => {
     if(!articlesWrapper) return;
 
     let navList = articlesWrapper.querySelector('aside > nav > ul');
-    let articlesWithAnchors = articlesWrapper.querySelectorAll('article > div[id]');
+    let articlesWithHeaders = articlesWrapper.querySelectorAll('article > div > h2');
 
-    Array.from(articlesWithAnchors).forEach( article => {
+    Array.from(articlesWithHeaders).forEach( (header, index) => {
+        header.parentElement.id = `article-${index}`
         let li = document.createElement('li');
         let a = document.createElement('a');
-        a.setAttribute("href", `#${article.id}`);
+        a.setAttribute("href", `#article-${index}`);
         
         let span = document.createElement('span');
-        span.textContent = article.querySelector('h3').textContent.trim();
+        span.textContent = header.textContent.trim();
 
         let svg = document.createElement('svg');
         svg.classList.add('icon');

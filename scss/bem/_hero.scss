@@ -354,6 +354,18 @@
                     max-width: 100%;
                 }
             }
+
+            &.hero__secondary-heading--low {
+                padding: 13rem 0 0rem;
+
+                @include breakpoint(tablet) {
+                    padding: 13rem 0 0rem;
+                }
+    
+                @include breakpoint(portrait-tablet) {
+                    padding: 7rem 0 0rem;
+                }
+            }
         }
     }
 

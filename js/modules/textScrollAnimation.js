@@ -25,19 +25,19 @@ export default () => {
             })
         })
 
-        gsap.set('.span-inner', { width: 0 })
+        gsap.set('.span-inner', { width: '0'});
 
         gsap.timeline({
             scrollTrigger:{
                     trigger: '.js-animated-text-trigger',
-                    scrub: 5,
+                    scrub: 4,
                     start: "top bottom",
-                    end: "bottom 50px"
+                    end: "top 50px"
                 }
             })
             .to('.span-inner', {
                 width: '100%', 
-                duration: 3.5, 
+                duration: 2.5, 
                 ease: "power1.in",
                 stagger: 2.5
             })

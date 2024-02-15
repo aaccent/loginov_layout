@@ -800,25 +800,9 @@
                     </div>
                 </div>
 
-                <div class="page-footer__decore">
-                    <svg id="footer-svg" viewBox="0 0 524 522" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <style>
-                            #svg-path {
-                                stroke-dasharray: 30;
-                                stroke-dashoffset: 1000;
-                                animation: dash 15s linear infinite;
-                            }
-
-                            @keyframes dash {
-                                to {
-                                    stroke-dasharray: 500;
-                                    stroke-dashoffset: 0;
-                                }
-                            }
-                        </style>
-                        <path id="svg-path" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M242.109 521H163.967L2 223.556H119.924L205.169 404.976L402.656 1H522C429.65 173.982 338.721 346.963 246.371 521H242.109ZM362.874 433.454V516.781H475.115V433.454H362.874Z"
-                            stroke="#FFFF20" stroke-width="2" stroke-miterlimit="10" />
+                <div class="page-footer__decore" id="js-footer-trigger">
+                    <svg class="page-footer__decore-svg" viewBox="0 0 524 522" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="svg-path" d="M242.109 521H163.967L2 223.556H119.924L205.169 404.976L402.655 1H522C429.65 173.982 338.721 346.963 246.371 521H242.109Z" stroke-width="2" />
                     </svg>
                 </div>
             </div>

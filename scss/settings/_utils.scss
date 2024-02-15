@@ -102,15 +102,29 @@ textarea:required:valid {
     }
 
     &__dark {
+        position: relative;
         @include breakpoint(mobile) {
             max-width: 27rem;
         }
+    }
+
+    &__dark-shadow {
+        position: absolute;
+        display: inline-block;
+        overflow:hidden;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: var(--black, #231F20) !important;
+        font: inherit;
+        font-weight: 600 !important;
     }
 
     &__colored {
         .span-outer {
             position: relative;
             display: inline-block;
+            font-weight: 600;
             white-space: nowrap;
 
             &:nth-child(2) {
@@ -129,6 +143,7 @@ textarea:required:valid {
             height: 100%;
             color: var(--black, #231F20) !important;
             font-style: normal;
+            font-weight: 600;
         }
     }
 }

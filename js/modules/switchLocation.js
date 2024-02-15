@@ -1,6 +1,6 @@
 export default () => {
     const modal = document.querySelector('.modal__container[data-target="modal-number"]');
-    const inputs = document.querySelectorAll('.modal__checkboxes > .radio > input[type="radio"]');
+    const inputs = document.querySelectorAll('.modal__container[data-target="modal-number"] .modal__checkboxes > .radio > input[type="radio"]');
     const button = document.querySelector('.contact.contact--button');
 
     if(!button && !modal) return;
@@ -24,10 +24,7 @@ export default () => {
             button.classList.toggle('contact--one');
             button.classList.toggle('contact--two');
 
-
-            setTimeout(() => {
-                modal.querySelector('.modal-close').click();
-            }, 600);
+            modal.querySelector('.modal-close').click();
         })  
     })
 }

@@ -17,7 +17,7 @@ export default () => {
 
     function setAnimationForSlider(
         listSelector = '.partnership__swiper-wrapper--one', 
-        transform = '75%', 
+        transform = '60%', 
         triggerSelector = '#js-partnership-trigger'
     ) {
         gsap.from(listSelector, { transform: 'translate3d(0, 0, 0)' })
@@ -26,7 +26,7 @@ export default () => {
             scrollTrigger:{
                     trigger: triggerSelector,
                     end: "bottom top",
-                    scrub: 1.5
+                    scrub: 3.5
                 }
             })
             .to(listSelector, {
@@ -61,7 +61,7 @@ export default () => {
         }
     
         if( trigger && secondSliderBox && mediaQuery.matches ) {
-            setAnimationForSlider('.partnership__swiper-wrapper--two', '-75%');
+            setAnimationForSlider('.partnership__swiper-wrapper--two', '-60%');
         }
     }
 };

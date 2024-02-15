@@ -15,6 +15,7 @@ import menuDropdownsOpens from './modules/menuDropdownsOpens.js';
 import menuSwiperControl from './modules/menuSwiperControl.js';
 import openMobileMenu from './modules/openMobileMenu.js';
 import switchLocation from './modules/switchLocation.js';
+import footerSvgAnimation from './modules/footerSvgAnimation.js';
 
 import heroMainSwiper from './modules/heroMainSwiper.js';
 import activitiesControl from './modules/activitiesControl.js';
@@ -33,6 +34,7 @@ import textParallax from './modules/textParallax.js';
 import preventSubmitEvent from './modules/preventSubmitEvent.js';
 import textScrollAnimation from './modules/textScrollAnimation.js';
 import articleNavRender from './modules/articleNavRender.js';
+import mobileSelectsSwitch from './modules/mobileSelectsSwitch.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -104,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuSwiperControl();
     openMobileMenu();
     setFixedHeader();
+    footerSvgAnimation();
     
     switchLocation();
     activitiesControl();
@@ -121,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     preventSubmitEvent();
     textScrollAnimation();
     articleNavRender();
+    mobileSelectsSwitch();
 
     setTimeout(() => {
         youtubeVideoControl();

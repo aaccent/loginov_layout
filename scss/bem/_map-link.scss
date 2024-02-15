@@ -7,8 +7,7 @@
         width: 2.5rem;
         height: 2.5rem;
         fill: var(--yellow, #efef00);
-        animation: svgFill 2s ease-in-out 0s infinite forwards;
-
+        
         @include breakpoint(portrait-tablet) {
             width: 1.8rem;
             height: 1.8rem;
@@ -17,17 +16,5 @@
 
     span {
         white-space: nowrap;
-    }
-}
-
-@keyframes svgFill {
-    0% {
-        fill: var(--yellow, #efef00);
-    };
-    50% {
-        fill: var(--blue, #00A9C1);
-    };
-    100% {
-        fill: var(--yellow, #efef00);
     }
 }

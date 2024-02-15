@@ -10,10 +10,21 @@
         &.select {
             width: 34rem;
             margin: unset;
+        }
 
-            @include breakpoint(mobile) {
-                width: 100%;
-            }
+        @include breakpoint(small-tablet) {
+            display: none;
+        }
+    }
+
+    &__dropdowns-mobile {
+        display: none;
+        width: 100%;
+        
+        @include breakpoint(small-tablet) {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
     }
 
@@ -38,7 +49,7 @@
             @include breakpoint(laptop) {
                 margin-top: 3rem;
             }
-    
+
             @include breakpoint(portrait-tablet) {
                 margin-top: 2.5rem;
             }

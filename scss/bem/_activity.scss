@@ -144,17 +144,23 @@
         padding-left: 1.4rem;
         cursor: pointer;
 
+        span {
+            @include breakpoint(mobile) {
+                line-height: 1.4285;
+            }
+        }
+
         .icon {
             position: absolute;
-            top: 50%;
+            top: 0.7rem;
             left: 0;
             z-index: 1;
 
             width: 0.6rem;
             height: 1rem;
-            transform: translateY(-50%);
 
             @include breakpoint(mobile) {
+                top: 0.6rem;
                 width: 0.5rem;
                 height: 0.8rem;
             }

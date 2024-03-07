@@ -9,7 +9,7 @@ export default () => {
         ],
         delay: anime.stagger(1200),
         easing: 'easeInOutQuad',
-        duration: 2000,
+        duration: 1600,
         loop: true
     });
 }

@@ -21,7 +21,7 @@ export default () => {
         innerHTML: [0, diff],
         easing: 'linear',
         delay: 200,
-        duration: 1300,
+        duration: 1000,
         round: 1 // Will round the animated value to 1 decimal
     });
 
@@ -30,7 +30,7 @@ export default () => {
         innerHTML: [0, quantity],
         easing: 'linear',
         delay: 200,
-        duration: 1300,
+        duration: 1000,
         round: 1 // Will round the animated value to 1 decimal
     });
 

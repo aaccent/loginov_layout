@@ -23,7 +23,7 @@ export default () => {
                     transform: 'translate(0,0)',
                 },
                 ease: "power1.in",
-                duration: 6.5,
+                duration: 5.2,
                 stagger: 1,
                 scrollTrigger:{
                     trigger: wrapper,

@@ -30,16 +30,16 @@ export default () => {
         gsap.timeline({
             scrollTrigger:{
                     trigger: '.js-animated-text-trigger',
-                    scrub: 4,
+                    scrub: 3.2,
                     start: "top bottom",
                     end: "top 50px"
                 }
             })
             .to('.span-inner', {
                 width: '100%', 
-                duration: 2.5, 
+                duration: 2,
                 ease: "power1.in",
-                stagger: 2.5
+                stagger: 2
             })
     } else {
         return;
